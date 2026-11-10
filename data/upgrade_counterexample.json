@@ -1,0 +1,114 @@
+{
+  "allowed_upgrades": {
+    "standard": [
+      "deluxe"
+    ]
+  },
+  "cot_age_limit": 2,
+  "daily_rates": [],
+  "daily_resources": [
+    {
+      "cots": 2,
+      "date": "2026-12-07",
+      "extra_beds": 3
+    },
+    {
+      "cots": 2,
+      "date": "2026-12-08",
+      "extra_beds": 3
+    }
+  ],
+  "data_origin": "100% synthetic; generated with Python random.Random; no real guests",
+  "description": "Deliberate counterexample: accepting one two-night upgrade can displace two native one-night requests.",
+  "generator_seed": 20261106,
+  "horizon_end": "2026-12-09",
+  "horizon_start": "2026-12-07",
+  "protection": [
+    {
+      "count": 1,
+      "date": "2026-12-07",
+      "room_type": "deluxe"
+    },
+    {
+      "count": 1,
+      "date": "2026-12-08",
+      "room_type": "deluxe"
+    }
+  ],
+  "requests": [
+    {
+      "accepted_bed_types": [
+        "king"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-07",
+      "check_out": "2026-12-09",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 20000,
+      "request_id": "A",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "king"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-07",
+      "check_out": "2026-12-08",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 20000,
+      "request_id": "B",
+      "requested_type": "deluxe"
+    },
+    {
+      "accepted_bed_types": [
+        "king"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-08",
+      "check_out": "2026-12-09",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 20000,
+      "request_id": "C",
+      "requested_type": "deluxe"
+    }
+  ],
+  "room_types": [
+    {
+      "base_rate_cents": 18000,
+      "code": "standard",
+      "max_adults": 2,
+      "max_auxiliary_items": 1,
+      "max_cots": 1,
+      "max_extra_beds": 1,
+      "max_occupants": 3,
+      "rank": 0
+    },
+    {
+      "base_rate_cents": 24000,
+      "code": "deluxe",
+      "max_adults": 3,
+      "max_auxiliary_items": 2,
+      "max_cots": 1,
+      "max_extra_beds": 1,
+      "max_occupants": 4,
+      "rank": 1
+    }
+  ],
+  "rooms": [
+    {
+      "bed_type": "king",
+      "blocked_dates": [],
+      "fixed_bed_places": 2,
+      "room_id": "D201",
+      "room_type": "deluxe"
+    }
+  ],
+  "schema_version": 1
+}

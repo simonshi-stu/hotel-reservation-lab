@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="demo-csrf" content="__DEMO_CSRF__">
+  <meta name="color-scheme" content="light">
+  <title>酒店分房实验台 · 本地交互演示</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#reservation-form">跳到模拟预订</a>
+  <header class="site-header">
+    <div class="brand"><span class="brand-mark" aria-hidden="true">H</span><span>ROOM / LAB<span class="brand-caption">酒店分房与库存事务</span></span></div>
+    <span class="local-label"><span class="status-dot" aria-hidden="true"></span>本地演示环境</span>
+  </header>
+  <main class="page-shell">
+    <section class="hero" aria-labelledby="page-title">
+      <div><p class="eyebrow">从一个入住需求，到一笔完整事务</p><h1 id="page-title">酒店分房实验台<span class="heading-dot">.</span></h1><p class="hero-description">选择策略，安排入住，看清每一晚的房间与资源如何变化。</p></div>
+      <div class="hero-actions"><button type="button" id="refresh-button" class="button button-quiet">刷新状态</button><button type="button" id="reset-button" class="button button-outline" disabled>新开一轮 <span aria-hidden="true">↗</span></button></div>
+    </section>
+    <div class="demo-notice"><span class="notice-label">SANDBOX</span><p>合成数据 · 本机 SQLite 逐笔事务演示，不是实际酒店预订或并发性能测试。</p></div>
+    <div id="message-banner" class="message-banner" role="status" aria-live="polite" hidden></div>
+    <section class="strategy-panel" aria-labelledby="strategy-heading">
+      <div class="section-intro"><span class="step-number">01</span><div><h2 id="strategy-heading">选择分房策略</h2><p>三份独立演示库，切换不迁移订单。</p></div></div>
+      <fieldset class="strategy-options"><legend class="sr-only">分房策略</legend>
+        <label class="strategy-option"><input type="radio" name="mode" value="strict"><span><strong>严格房型</strong><small>只分配请求房型</small></span></label>
+        <label class="strategy-option"><input type="radio" name="mode" value="upgrade" checked><span><strong>允许升级</strong><small>按规则尝试更高房型</small></span></label>
+        <label class="strategy-option"><input type="radio" name="mode" value="protected_upgrade"><span><strong>保护库存升级</strong><small>升级时保留保护库存</small></span></label>
+      </fieldset>
+    </section>
+    <section class="metrics" aria-label="当前策略库存概览" aria-busy="true" id="metrics">
+      <article class="metric"><p>当前有效订单</p><strong id="metric-bookings">—</strong><span>BOOKED</span></article>
+      <article class="metric"><p>已占用房晚</p><strong id="metric-occupied">—</strong><span>按实体房逐晚计算</span></article>
+      <article class="metric"><p>剩余可售房晚</p><strong id="metric-available">—</strong><span id="metric-range">整个演示日期范围</span></article>
+      <article class="metric metric-audit"><p>独立对账</p><strong id="metric-audit">读取中</strong><span id="metric-audit-note">等待数据库状态</span></article>
+    </section>
+    <div class="workspace">
+      <section class="panel reservation-panel" aria-labelledby="reservation-heading">
+        <div class="panel-heading"><div><p class="eyebrow">GUEST REQUEST</p><h2 id="reservation-heading">新建模拟预订</h2></div><span class="step-number">02</span></div>
+        <form id="reservation-form">
+          <fieldset id="request-fields" class="request-fields" disabled><legend class="sr-only">入住需求</legend>
+            <div class="form-row"><label>入住日期<input type="date" id="check-in" name="check_in" required></label><label>离店日期<input type="date" id="check-out" name="check_out" required></label></div>
+            <p id="stay-summary" class="field-help">入住日计入，离店日不计入房晚。</p>
+            <label>请求房型<select id="requested-type" name="requested_type" required><option value="">正在读取房型…</option></select></label>
+            <p id="room-type-help" class="field-help"></p>
+            <fieldset class="bed-choices"><legend>可接受床型 <span>可多选</span></legend><div class="check-chips"><label><input type="checkbox" name="bed_type" value="king" checked><span>大床</span></label><label><input type="checkbox" name="bed_type" value="twin" checked><span>双床</span></label><label><input type="checkbox" name="bed_type" value="family" checked><span>家庭床</span></label></div></fieldset>
+            <div class="form-row guest-row"><label>成人数<input type="number" id="adults" name="adults" min="1" max="20" step="1" value="2" required inputmode="numeric"></label><label>儿童年龄<input type="text" id="child-ages" name="child_ages" placeholder="如：1, 8" autocomplete="off" aria-describedby="children-help"></label></div>
+            <p id="children-help" class="field-help">0–17 岁，以逗号分隔；没有儿童则留空。</p>
+            <div class="options-row"><label class="check-line"><input type="checkbox" id="allow-upgrade" checked>允许升级房型</label><label class="check-line"><input type="checkbox" id="allow-extra-bed" checked>允许加床</label></div>
+            <label>整段模拟升级成本上限 <span class="label-detail">人民币 / 元</span><div class="money-input"><span aria-hidden="true">¥</span><input type="number" id="upgrade-budget" min="0" step="0.01" value="600" required inputmode="decimal"></div></label>
+            <p class="field-help">用于分配规则的合成成本，不会产生实际支付。</p>
+            <label class="failure-option"><input type="checkbox" id="simulate-failure"><span><strong>首晚写入后注入故障</strong><small>真实回滚整笔事务，观察库存是否保持不变。</small></span></label>
+            <button type="submit" id="reserve-button" class="button button-primary">新建模拟预订 <span aria-hidden="true">→</span></button>
+            <button type="button" id="baby-example" class="button button-text">填入带婴儿示例</button>
+          </fieldset>
+        </form>
+        <div class="replay-box"><div><strong>验证同键重放</strong><p>使用上次请求的完整内容，关闭故障注入。不会重复扣库存；取消后也不会恢复预订。</p></div><button type="button" id="replay-button" class="button button-outline" disabled>原请求键重放 / 正常重试</button><p id="last-request-id" class="request-key">尚无请求键</p></div>
+        <div id="pending-box" class="pending-box" hidden><strong id="pending-title">上次操作的结果尚未确认</strong><p id="pending-description"></p><button type="button" id="pending-retry" class="button button-outline">核实 / 重试上次操作</button><details class="retry-payload"><summary>查看保留的原请求</summary><pre id="pending-payload"></pre></details></div><details id="archived-box" class="archived-box" hidden><summary>旧轮次记录与核实 <span id="archived-count"></span></summary><p>这些操作的原内容始终保留。可只读查询原轮次的订单与取消状态，不会重新下单或改变库存；查询只代表所示时刻的数据库快照。</p><div id="archived-list"></div></details>
+      </section>
+      <div class="main-column">
+        <section class="panel calendar-panel" aria-labelledby="calendar-heading">
+          <div class="panel-heading"><div><p class="eyebrow">LIVE INVENTORY</p><h2 id="calendar-heading">每一间，每一晚</h2></div><span id="calendar-range" class="subtle-tag">读取中</span></div>
+          <div class="calendar-toolbar"><p>整段入住始终分配同一间实体房。</p><div class="legend" aria-label="库存状态图例"><span><i class="legend-dot free" aria-hidden="true"></i>空闲</span><span><i class="legend-dot occupied" aria-hidden="true"></i>占用</span><span><i class="legend-dot blocked" aria-hidden="true"></i>维修</span></div></div>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="逐日实体房和辅助资源库存，可横向滚动"><table id="inventory-table" class="inventory-table"><caption class="sr-only">实体房逐日库存，包含入住日，不包含离店日；辅助资源为剩余量 / 总量</caption><thead id="inventory-head"></thead><tbody id="inventory-body"></tbody><tfoot id="inventory-foot"></tfoot></table><p id="inventory-placeholder" class="empty-state">正在读取逐日库存…</p></div>
+          <div class="calendar-footnote"><span id="resource-summary">婴儿床与加床余量将在读取后显示。</span><span>含入住日 · 不含离店日</span></div>
+          <details class="catalog-details"><summary>查看房型与入住容量</summary><div id="catalog-cards" class="catalog-cards"></div><p class="field-help">人数上限不代表一定能入住，还需满足床型、儿童规则、辅助资源和连续房晚。</p></details>
+        </section>
+        <section class="panel transaction-panel" aria-labelledby="transaction-heading">
+          <div class="panel-heading"><div><p class="eyebrow">TRANSACTION RECEIPT</p><h2 id="transaction-heading">事务回执</h2></div><span id="receipt-status" class="status-badge neutral">等待请求</span></div>
+          <div id="receipt-empty" class="receipt-empty"><span class="receipt-icon" aria-hidden="true">↳</span><div><strong>把一个入住需求交给数据库</strong><p>这里会展示后台实际返回的事务步骤、净房晚变化和对账结果。</p></div></div>
+          <div id="receipt-content" hidden><p id="receipt-title" class="receipt-title"></p><p id="receipt-description" class="receipt-description"></p><div id="receipt-facts" class="receipt-facts"></div><ol id="receipt-trace" class="trace-list"></ol><p id="receipt-key" class="request-key"></p></div>
+        </section>
+      </div>
+    </div>
+    <section class="panel bookings-panel" aria-labelledby="bookings-heading">
+      <div class="panel-heading"><div><p class="eyebrow">RESERVATION LEDGER</p><h2 id="bookings-heading">本轮订单记录 <span id="booking-count" class="count-badge">0</span></h2></div><p class="panel-note">保留原始决定，取消只释放已记录的资源。</p></div>
+      <div id="bookings-list" class="bookings-list"><p class="empty-state">这轮实验尚无订单。提交一个入住需求，开始观察。</p></div>
+    </section>
+    <footer class="page-footer"><span>ROOM / LAB <span class="footer-separator">·</span> 合成场景，真实事务</span><span id="environment-note">SQLite 本地持久化 · 不连接实际酒店库存</span></footer>
+  </main>
+  <dialog id="reset-dialog" aria-labelledby="reset-title" aria-describedby="reset-description"><form method="dialog"><span class="dialog-icon" aria-hidden="true">↗</span><h2 id="reset-title">为三种策略新开一轮？</h2><p id="reset-description">三种策略都会切换到全新的模拟数据库。旧数据库保留归档，不会删除；本轮三种策略的订单都不再显示在新一轮中。</p><p id="reset-mode" class="dialog-mode"></p><div class="dialog-actions"><button type="submit" value="cancel" class="button button-outline" autofocus>取消</button><button type="submit" value="confirm" class="button button-primary">确认新开一轮</button></div></form></dialog>
+  <noscript><p class="noscript">本实验台需要启用 JavaScript 才能读取本地演示服务。不会连接实际酒店或收取费用。</p></noscript>
+</body>
+</html>

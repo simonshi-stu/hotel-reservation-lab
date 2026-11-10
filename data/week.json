@@ -1,0 +1,1548 @@
+{
+  "allowed_upgrades": {
+    "deluxe": [
+      "suite"
+    ],
+    "family": [
+      "suite"
+    ],
+    "standard": [
+      "deluxe",
+      "family",
+      "suite"
+    ]
+  },
+  "cot_age_limit": 2,
+  "daily_rates": [
+    {
+      "date": "2026-12-07",
+      "rate_cents": 18000,
+      "room_type": "standard"
+    },
+    {
+      "date": "2026-12-08",
+      "rate_cents": 18000,
+      "room_type": "standard"
+    },
+    {
+      "date": "2026-12-09",
+      "rate_cents": 18000,
+      "room_type": "standard"
+    },
+    {
+      "date": "2026-12-10",
+      "rate_cents": 18000,
+      "room_type": "standard"
+    },
+    {
+      "date": "2026-12-11",
+      "rate_cents": 26000,
+      "room_type": "standard"
+    },
+    {
+      "date": "2026-12-12",
+      "rate_cents": 26000,
+      "room_type": "standard"
+    },
+    {
+      "date": "2026-12-13",
+      "rate_cents": 18000,
+      "room_type": "standard"
+    },
+    {
+      "date": "2026-12-14",
+      "rate_cents": 18000,
+      "room_type": "standard"
+    },
+    {
+      "date": "2026-12-15",
+      "rate_cents": 18000,
+      "room_type": "standard"
+    },
+    {
+      "date": "2026-12-16",
+      "rate_cents": 18000,
+      "room_type": "standard"
+    },
+    {
+      "date": "2026-12-07",
+      "rate_cents": 24000,
+      "room_type": "deluxe"
+    },
+    {
+      "date": "2026-12-08",
+      "rate_cents": 24000,
+      "room_type": "deluxe"
+    },
+    {
+      "date": "2026-12-09",
+      "rate_cents": 24000,
+      "room_type": "deluxe"
+    },
+    {
+      "date": "2026-12-10",
+      "rate_cents": 24000,
+      "room_type": "deluxe"
+    },
+    {
+      "date": "2026-12-11",
+      "rate_cents": 32000,
+      "room_type": "deluxe"
+    },
+    {
+      "date": "2026-12-12",
+      "rate_cents": 32000,
+      "room_type": "deluxe"
+    },
+    {
+      "date": "2026-12-13",
+      "rate_cents": 24000,
+      "room_type": "deluxe"
+    },
+    {
+      "date": "2026-12-14",
+      "rate_cents": 24000,
+      "room_type": "deluxe"
+    },
+    {
+      "date": "2026-12-15",
+      "rate_cents": 24000,
+      "room_type": "deluxe"
+    },
+    {
+      "date": "2026-12-16",
+      "rate_cents": 24000,
+      "room_type": "deluxe"
+    },
+    {
+      "date": "2026-12-07",
+      "rate_cents": 32000,
+      "room_type": "family"
+    },
+    {
+      "date": "2026-12-08",
+      "rate_cents": 32000,
+      "room_type": "family"
+    },
+    {
+      "date": "2026-12-09",
+      "rate_cents": 32000,
+      "room_type": "family"
+    },
+    {
+      "date": "2026-12-10",
+      "rate_cents": 32000,
+      "room_type": "family"
+    },
+    {
+      "date": "2026-12-11",
+      "rate_cents": 40000,
+      "room_type": "family"
+    },
+    {
+      "date": "2026-12-12",
+      "rate_cents": 40000,
+      "room_type": "family"
+    },
+    {
+      "date": "2026-12-13",
+      "rate_cents": 32000,
+      "room_type": "family"
+    },
+    {
+      "date": "2026-12-14",
+      "rate_cents": 32000,
+      "room_type": "family"
+    },
+    {
+      "date": "2026-12-15",
+      "rate_cents": 32000,
+      "room_type": "family"
+    },
+    {
+      "date": "2026-12-16",
+      "rate_cents": 32000,
+      "room_type": "family"
+    },
+    {
+      "date": "2026-12-07",
+      "rate_cents": 46000,
+      "room_type": "suite"
+    },
+    {
+      "date": "2026-12-08",
+      "rate_cents": 46000,
+      "room_type": "suite"
+    },
+    {
+      "date": "2026-12-09",
+      "rate_cents": 46000,
+      "room_type": "suite"
+    },
+    {
+      "date": "2026-12-10",
+      "rate_cents": 46000,
+      "room_type": "suite"
+    },
+    {
+      "date": "2026-12-11",
+      "rate_cents": 54000,
+      "room_type": "suite"
+    },
+    {
+      "date": "2026-12-12",
+      "rate_cents": 54000,
+      "room_type": "suite"
+    },
+    {
+      "date": "2026-12-13",
+      "rate_cents": 46000,
+      "room_type": "suite"
+    },
+    {
+      "date": "2026-12-14",
+      "rate_cents": 46000,
+      "room_type": "suite"
+    },
+    {
+      "date": "2026-12-15",
+      "rate_cents": 46000,
+      "room_type": "suite"
+    },
+    {
+      "date": "2026-12-16",
+      "rate_cents": 46000,
+      "room_type": "suite"
+    }
+  ],
+  "daily_resources": [
+    {
+      "cots": 2,
+      "date": "2026-12-07",
+      "extra_beds": 3
+    },
+    {
+      "cots": 2,
+      "date": "2026-12-08",
+      "extra_beds": 3
+    },
+    {
+      "cots": 2,
+      "date": "2026-12-09",
+      "extra_beds": 3
+    },
+    {
+      "cots": 1,
+      "date": "2026-12-10",
+      "extra_beds": 3
+    },
+    {
+      "cots": 1,
+      "date": "2026-12-11",
+      "extra_beds": 2
+    },
+    {
+      "cots": 2,
+      "date": "2026-12-12",
+      "extra_beds": 3
+    },
+    {
+      "cots": 2,
+      "date": "2026-12-13",
+      "extra_beds": 3
+    },
+    {
+      "cots": 2,
+      "date": "2026-12-14",
+      "extra_beds": 3
+    },
+    {
+      "cots": 2,
+      "date": "2026-12-15",
+      "extra_beds": 3
+    },
+    {
+      "cots": 2,
+      "date": "2026-12-16",
+      "extra_beds": 3
+    }
+  ],
+  "data_origin": "100% synthetic; generated with Python random.Random; no real guests",
+  "description": "Seven arrival-demand days, ten inventory nights, eight physical rooms; no trained forecast.",
+  "generator_seed": 20261106,
+  "horizon_end": "2026-12-17",
+  "horizon_start": "2026-12-07",
+  "protection": [
+    {
+      "count": 1,
+      "date": "2026-12-10",
+      "room_type": "family"
+    },
+    {
+      "count": 1,
+      "date": "2026-12-11",
+      "room_type": "family"
+    },
+    {
+      "count": 1,
+      "date": "2026-12-12",
+      "room_type": "family"
+    },
+    {
+      "count": 1,
+      "date": "2026-12-10",
+      "room_type": "suite"
+    },
+    {
+      "count": 1,
+      "date": "2026-12-11",
+      "room_type": "suite"
+    },
+    {
+      "count": 1,
+      "date": "2026-12-12",
+      "room_type": "suite"
+    }
+  ],
+  "requests": [
+    {
+      "accepted_bed_types": [
+        "king"
+      ],
+      "adults": 1,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-07",
+      "check_out": "2026-12-10",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 30000,
+      "request_id": "SYN-001",
+      "requested_type": "deluxe"
+    },
+    {
+      "accepted_bed_types": [
+        "family"
+      ],
+      "adults": 1,
+      "allow_extra_bed": false,
+      "allow_upgrade": true,
+      "check_in": "2026-12-07",
+      "check_out": "2026-12-08",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 15000,
+      "request_id": "SYN-002",
+      "requested_type": "family"
+    },
+    {
+      "accepted_bed_types": [
+        "king",
+        "twin",
+        "family"
+      ],
+      "adults": 1,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-07",
+      "check_out": "2026-12-10",
+      "child_ages": [
+        0
+      ],
+      "max_upgrade_cost_cents": 60000,
+      "request_id": "SYN-003",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "family"
+      ],
+      "adults": 2,
+      "allow_extra_bed": false,
+      "allow_upgrade": false,
+      "check_in": "2026-12-07",
+      "check_out": "2026-12-08",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 60000,
+      "request_id": "SYN-004",
+      "requested_type": "family"
+    },
+    {
+      "accepted_bed_types": [
+        "twin"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-07",
+      "check_out": "2026-12-08",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 60000,
+      "request_id": "SYN-005",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "twin"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-07",
+      "check_out": "2026-12-08",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 60000,
+      "request_id": "SYN-006",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "king"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-08",
+      "check_out": "2026-12-10",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 60000,
+      "request_id": "SYN-007",
+      "requested_type": "deluxe"
+    },
+    {
+      "accepted_bed_types": [
+        "king",
+        "twin"
+      ],
+      "adults": 1,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-08",
+      "check_out": "2026-12-09",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 15000,
+      "request_id": "SYN-008",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "king"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": false,
+      "check_in": "2026-12-08",
+      "check_out": "2026-12-10",
+      "child_ages": [
+        2
+      ],
+      "max_upgrade_cost_cents": 30000,
+      "request_id": "SYN-009",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "king"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-08",
+      "check_out": "2026-12-09",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 30000,
+      "request_id": "SYN-010",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "family"
+      ],
+      "adults": 2,
+      "allow_extra_bed": false,
+      "allow_upgrade": true,
+      "check_in": "2026-12-08",
+      "check_out": "2026-12-10",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 15000,
+      "request_id": "SYN-011",
+      "requested_type": "family"
+    },
+    {
+      "accepted_bed_types": [
+        "king"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-08",
+      "check_out": "2026-12-09",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 30000,
+      "request_id": "SYN-012",
+      "requested_type": "suite"
+    },
+    {
+      "accepted_bed_types": [
+        "twin"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-08",
+      "check_out": "2026-12-10",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 30000,
+      "request_id": "SYN-013",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "king"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-08",
+      "check_out": "2026-12-11",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 60000,
+      "request_id": "SYN-014",
+      "requested_type": "deluxe"
+    },
+    {
+      "accepted_bed_types": [
+        "family"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-09",
+      "check_out": "2026-12-12",
+      "child_ages": [
+        2
+      ],
+      "max_upgrade_cost_cents": 30000,
+      "request_id": "SYN-015",
+      "requested_type": "family"
+    },
+    {
+      "accepted_bed_types": [
+        "king",
+        "twin"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": false,
+      "check_in": "2026-12-09",
+      "check_out": "2026-12-10",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 15000,
+      "request_id": "SYN-016",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "king"
+      ],
+      "adults": 3,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-09",
+      "check_out": "2026-12-11",
+      "child_ages": [
+        9
+      ],
+      "max_upgrade_cost_cents": 60000,
+      "request_id": "SYN-017",
+      "requested_type": "deluxe"
+    },
+    {
+      "accepted_bed_types": [
+        "twin"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-09",
+      "check_out": "2026-12-11",
+      "child_ages": [
+        5,
+        15
+      ],
+      "max_upgrade_cost_cents": 30000,
+      "request_id": "SYN-018",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "twin"
+      ],
+      "adults": 3,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-09",
+      "check_out": "2026-12-11",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 30000,
+      "request_id": "SYN-019",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "king"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-09",
+      "check_out": "2026-12-11",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 60000,
+      "request_id": "SYN-020",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "king"
+      ],
+      "adults": 3,
+      "allow_extra_bed": false,
+      "allow_upgrade": true,
+      "check_in": "2026-12-09",
+      "check_out": "2026-12-11",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 30000,
+      "request_id": "SYN-021",
+      "requested_type": "deluxe"
+    },
+    {
+      "accepted_bed_types": [
+        "twin"
+      ],
+      "adults": 1,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-09",
+      "check_out": "2026-12-11",
+      "child_ages": [
+        2
+      ],
+      "max_upgrade_cost_cents": 60000,
+      "request_id": "SYN-022",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "family"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-09",
+      "check_out": "2026-12-10",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 30000,
+      "request_id": "SYN-023",
+      "requested_type": "family"
+    },
+    {
+      "accepted_bed_types": [
+        "twin"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-09",
+      "check_out": "2026-12-10",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 30000,
+      "request_id": "SYN-024",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "king"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-09",
+      "check_out": "2026-12-12",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 60000,
+      "request_id": "SYN-025",
+      "requested_type": "suite"
+    },
+    {
+      "accepted_bed_types": [
+        "king"
+      ],
+      "adults": 1,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-09",
+      "check_out": "2026-12-11",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 60000,
+      "request_id": "SYN-026",
+      "requested_type": "deluxe"
+    },
+    {
+      "accepted_bed_types": [
+        "king"
+      ],
+      "adults": 3,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-10",
+      "check_out": "2026-12-12",
+      "child_ages": [
+        2
+      ],
+      "max_upgrade_cost_cents": 60000,
+      "request_id": "SYN-027",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "king"
+      ],
+      "adults": 3,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-10",
+      "check_out": "2026-12-12",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 15000,
+      "request_id": "SYN-028",
+      "requested_type": "deluxe"
+    },
+    {
+      "accepted_bed_types": [
+        "king"
+      ],
+      "adults": 3,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-10",
+      "check_out": "2026-12-11",
+      "child_ages": [
+        1
+      ],
+      "max_upgrade_cost_cents": 60000,
+      "request_id": "SYN-029",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "twin"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-10",
+      "check_out": "2026-12-12",
+      "child_ages": [
+        9
+      ],
+      "max_upgrade_cost_cents": 60000,
+      "request_id": "SYN-030",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "king"
+      ],
+      "adults": 1,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-10",
+      "check_out": "2026-12-12",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 60000,
+      "request_id": "SYN-031",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "twin"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-10",
+      "check_out": "2026-12-13",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 15000,
+      "request_id": "SYN-032",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "king"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-10",
+      "check_out": "2026-12-11",
+      "child_ages": [
+        1
+      ],
+      "max_upgrade_cost_cents": 15000,
+      "request_id": "SYN-033",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "family"
+      ],
+      "adults": 1,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-10",
+      "check_out": "2026-12-12",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 15000,
+      "request_id": "SYN-034",
+      "requested_type": "family"
+    },
+    {
+      "accepted_bed_types": [
+        "king"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-10",
+      "check_out": "2026-12-12",
+      "child_ages": [
+        0,
+        5
+      ],
+      "max_upgrade_cost_cents": 30000,
+      "request_id": "SYN-035",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "king"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": false,
+      "check_in": "2026-12-10",
+      "check_out": "2026-12-12",
+      "child_ages": [
+        1
+      ],
+      "max_upgrade_cost_cents": 15000,
+      "request_id": "SYN-036",
+      "requested_type": "deluxe"
+    },
+    {
+      "accepted_bed_types": [
+        "twin"
+      ],
+      "adults": 3,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-10",
+      "check_out": "2026-12-12",
+      "child_ages": [
+        9
+      ],
+      "max_upgrade_cost_cents": 30000,
+      "request_id": "SYN-037",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "family"
+      ],
+      "adults": 1,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-10",
+      "check_out": "2026-12-11",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 15000,
+      "request_id": "SYN-038",
+      "requested_type": "family"
+    },
+    {
+      "accepted_bed_types": [
+        "king"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-10",
+      "check_out": "2026-12-12",
+      "child_ages": [
+        2,
+        9
+      ],
+      "max_upgrade_cost_cents": 60000,
+      "request_id": "SYN-039",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "king"
+      ],
+      "adults": 2,
+      "allow_extra_bed": false,
+      "allow_upgrade": true,
+      "check_in": "2026-12-10",
+      "check_out": "2026-12-11",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 30000,
+      "request_id": "SYN-040",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "king"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-10",
+      "check_out": "2026-12-12",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 60000,
+      "request_id": "SYN-041",
+      "requested_type": "deluxe"
+    },
+    {
+      "accepted_bed_types": [
+        "king",
+        "twin",
+        "family"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-10",
+      "check_out": "2026-12-12",
+      "child_ages": [
+        5
+      ],
+      "max_upgrade_cost_cents": 15000,
+      "request_id": "SYN-042",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "king",
+        "twin"
+      ],
+      "adults": 2,
+      "allow_extra_bed": false,
+      "allow_upgrade": true,
+      "check_in": "2026-12-10",
+      "check_out": "2026-12-13",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 15000,
+      "request_id": "SYN-043",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "king",
+        "twin"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-10",
+      "check_out": "2026-12-12",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 60000,
+      "request_id": "SYN-044",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "king"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-11",
+      "check_out": "2026-12-12",
+      "child_ages": [
+        9
+      ],
+      "max_upgrade_cost_cents": 30000,
+      "request_id": "SYN-045",
+      "requested_type": "deluxe"
+    },
+    {
+      "accepted_bed_types": [
+        "king"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-11",
+      "check_out": "2026-12-12",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 30000,
+      "request_id": "SYN-046",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "king"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-11",
+      "check_out": "2026-12-14",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 15000,
+      "request_id": "SYN-047",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "twin"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-11",
+      "check_out": "2026-12-12",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 30000,
+      "request_id": "SYN-048",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "twin"
+      ],
+      "adults": 1,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-11",
+      "check_out": "2026-12-13",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 60000,
+      "request_id": "SYN-049",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "family"
+      ],
+      "adults": 2,
+      "allow_extra_bed": false,
+      "allow_upgrade": true,
+      "check_in": "2026-12-11",
+      "check_out": "2026-12-14",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 15000,
+      "request_id": "SYN-050",
+      "requested_type": "family"
+    },
+    {
+      "accepted_bed_types": [
+        "king"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": false,
+      "check_in": "2026-12-11",
+      "check_out": "2026-12-12",
+      "child_ages": [
+        1,
+        9
+      ],
+      "max_upgrade_cost_cents": 60000,
+      "request_id": "SYN-051",
+      "requested_type": "deluxe"
+    },
+    {
+      "accepted_bed_types": [
+        "family"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": false,
+      "check_in": "2026-12-11",
+      "check_out": "2026-12-12",
+      "child_ages": [
+        2,
+        2
+      ],
+      "max_upgrade_cost_cents": 30000,
+      "request_id": "SYN-052",
+      "requested_type": "family"
+    },
+    {
+      "accepted_bed_types": [
+        "family"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-11",
+      "check_out": "2026-12-12",
+      "child_ages": [
+        1
+      ],
+      "max_upgrade_cost_cents": 60000,
+      "request_id": "SYN-053",
+      "requested_type": "family"
+    },
+    {
+      "accepted_bed_types": [
+        "twin"
+      ],
+      "adults": 2,
+      "allow_extra_bed": false,
+      "allow_upgrade": true,
+      "check_in": "2026-12-11",
+      "check_out": "2026-12-13",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 60000,
+      "request_id": "SYN-054",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "king",
+        "twin"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-11",
+      "check_out": "2026-12-12",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 15000,
+      "request_id": "SYN-055",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "family"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-11",
+      "check_out": "2026-12-12",
+      "child_ages": [
+        2
+      ],
+      "max_upgrade_cost_cents": 15000,
+      "request_id": "SYN-056",
+      "requested_type": "family"
+    },
+    {
+      "accepted_bed_types": [
+        "king"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-11",
+      "check_out": "2026-12-12",
+      "child_ages": [
+        15
+      ],
+      "max_upgrade_cost_cents": 30000,
+      "request_id": "SYN-057",
+      "requested_type": "deluxe"
+    },
+    {
+      "accepted_bed_types": [
+        "family"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-11",
+      "check_out": "2026-12-14",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 60000,
+      "request_id": "SYN-058",
+      "requested_type": "family"
+    },
+    {
+      "accepted_bed_types": [
+        "king"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-11",
+      "check_out": "2026-12-12",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 60000,
+      "request_id": "SYN-059",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "king",
+        "twin",
+        "family"
+      ],
+      "adults": 1,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-11",
+      "check_out": "2026-12-14",
+      "child_ages": [
+        15
+      ],
+      "max_upgrade_cost_cents": 30000,
+      "request_id": "SYN-060",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "twin"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-12",
+      "check_out": "2026-12-14",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 15000,
+      "request_id": "SYN-061",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "king",
+        "twin"
+      ],
+      "adults": 3,
+      "allow_extra_bed": true,
+      "allow_upgrade": false,
+      "check_in": "2026-12-12",
+      "check_out": "2026-12-15",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 60000,
+      "request_id": "SYN-062",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "family"
+      ],
+      "adults": 1,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-12",
+      "check_out": "2026-12-13",
+      "child_ages": [
+        9,
+        2
+      ],
+      "max_upgrade_cost_cents": 15000,
+      "request_id": "SYN-063",
+      "requested_type": "family"
+    },
+    {
+      "accepted_bed_types": [
+        "twin"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-12",
+      "check_out": "2026-12-13",
+      "child_ages": [
+        2
+      ],
+      "max_upgrade_cost_cents": 30000,
+      "request_id": "SYN-064",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "twin"
+      ],
+      "adults": 2,
+      "allow_extra_bed": false,
+      "allow_upgrade": true,
+      "check_in": "2026-12-12",
+      "check_out": "2026-12-13",
+      "child_ages": [
+        15,
+        9
+      ],
+      "max_upgrade_cost_cents": 30000,
+      "request_id": "SYN-065",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "king",
+        "twin"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": false,
+      "check_in": "2026-12-12",
+      "check_out": "2026-12-14",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 30000,
+      "request_id": "SYN-066",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "king",
+        "twin"
+      ],
+      "adults": 2,
+      "allow_extra_bed": false,
+      "allow_upgrade": true,
+      "check_in": "2026-12-12",
+      "check_out": "2026-12-14",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 60000,
+      "request_id": "SYN-067",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "twin"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-12",
+      "check_out": "2026-12-15",
+      "child_ages": [
+        5,
+        0
+      ],
+      "max_upgrade_cost_cents": 30000,
+      "request_id": "SYN-068",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "king",
+        "twin"
+      ],
+      "adults": 1,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-12",
+      "check_out": "2026-12-14",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 15000,
+      "request_id": "SYN-069",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "king"
+      ],
+      "adults": 1,
+      "allow_extra_bed": true,
+      "allow_upgrade": true,
+      "check_in": "2026-12-12",
+      "check_out": "2026-12-14",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 60000,
+      "request_id": "SYN-070",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "king",
+        "twin"
+      ],
+      "adults": 1,
+      "allow_extra_bed": true,
+      "allow_upgrade": false,
+      "check_in": "2026-12-13",
+      "check_out": "2026-12-15",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 30000,
+      "request_id": "SYN-071",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "king"
+      ],
+      "adults": 1,
+      "allow_extra_bed": false,
+      "allow_upgrade": true,
+      "check_in": "2026-12-13",
+      "check_out": "2026-12-14",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 30000,
+      "request_id": "SYN-072",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "king",
+        "twin",
+        "family"
+      ],
+      "adults": 2,
+      "allow_extra_bed": false,
+      "allow_upgrade": false,
+      "check_in": "2026-12-13",
+      "check_out": "2026-12-14",
+      "child_ages": [
+        9
+      ],
+      "max_upgrade_cost_cents": 60000,
+      "request_id": "SYN-073",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "twin"
+      ],
+      "adults": 2,
+      "allow_extra_bed": true,
+      "allow_upgrade": false,
+      "check_in": "2026-12-13",
+      "check_out": "2026-12-16",
+      "child_ages": [
+        0
+      ],
+      "max_upgrade_cost_cents": 15000,
+      "request_id": "SYN-074",
+      "requested_type": "standard"
+    },
+    {
+      "accepted_bed_types": [
+        "king"
+      ],
+      "adults": 1,
+      "allow_extra_bed": true,
+      "allow_upgrade": false,
+      "check_in": "2026-12-13",
+      "check_out": "2026-12-16",
+      "child_ages": [],
+      "max_upgrade_cost_cents": 30000,
+      "request_id": "SYN-075",
+      "requested_type": "standard"
+    }
+  ],
+  "room_types": [
+    {
+      "base_rate_cents": 18000,
+      "code": "standard",
+      "max_adults": 2,
+      "max_auxiliary_items": 1,
+      "max_cots": 1,
+      "max_extra_beds": 1,
+      "max_occupants": 3,
+      "rank": 0
+    },
+    {
+      "base_rate_cents": 24000,
+      "code": "deluxe",
+      "max_adults": 3,
+      "max_auxiliary_items": 2,
+      "max_cots": 1,
+      "max_extra_beds": 1,
+      "max_occupants": 4,
+      "rank": 1
+    },
+    {
+      "base_rate_cents": 32000,
+      "code": "family",
+      "max_adults": 4,
+      "max_auxiliary_items": 1,
+      "max_cots": 1,
+      "max_extra_beds": 1,
+      "max_occupants": 5,
+      "rank": 2
+    },
+    {
+      "base_rate_cents": 46000,
+      "code": "suite",
+      "max_adults": 4,
+      "max_auxiliary_items": 2,
+      "max_cots": 1,
+      "max_extra_beds": 2,
+      "max_occupants": 5,
+      "rank": 3
+    }
+  ],
+  "rooms": [
+    {
+      "bed_type": "king",
+      "blocked_dates": [],
+      "fixed_bed_places": 2,
+      "room_id": "S101",
+      "room_type": "standard"
+    },
+    {
+      "bed_type": "king",
+      "blocked_dates": [
+        "2026-12-10"
+      ],
+      "fixed_bed_places": 2,
+      "room_id": "S102",
+      "room_type": "standard"
+    },
+    {
+      "bed_type": "twin",
+      "blocked_dates": [],
+      "fixed_bed_places": 2,
+      "room_id": "S103",
+      "room_type": "standard"
+    },
+    {
+      "bed_type": "twin",
+      "blocked_dates": [],
+      "fixed_bed_places": 2,
+      "room_id": "S104",
+      "room_type": "standard"
+    },
+    {
+      "bed_type": "king",
+      "blocked_dates": [
+        "2026-12-08"
+      ],
+      "fixed_bed_places": 2,
+      "room_id": "D201",
+      "room_type": "deluxe"
+    },
+    {
+      "bed_type": "family",
+      "blocked_dates": [],
+      "fixed_bed_places": 4,
+      "room_id": "F301",
+      "room_type": "family"
+    },
+    {
+      "bed_type": "family",
+      "blocked_dates": [
+        "2026-12-12"
+      ],
+      "fixed_bed_places": 4,
+      "room_id": "F302",
+      "room_type": "family"
+    },
+    {
+      "bed_type": "king",
+      "blocked_dates": [],
+      "fixed_bed_places": 2,
+      "room_id": "Q401",
+      "room_type": "suite"
+    }
+  ],
+  "schema_version": 1
+}

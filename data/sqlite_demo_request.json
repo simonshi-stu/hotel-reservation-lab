@@ -1,0 +1,18 @@
+{
+  "accepted_bed_types": [
+    "king",
+    "twin",
+    "family"
+  ],
+  "adults": 1,
+  "allow_extra_bed": true,
+  "allow_upgrade": true,
+  "check_in": "2026-12-07",
+  "check_out": "2026-12-10",
+  "child_ages": [
+    0
+  ],
+  "max_upgrade_cost_cents": 60000,
+  "request_id": "SYN-003",
+  "requested_type": "standard"
+}
