@@ -1,0 +1,400 @@
+{
+  "synthetic_only": true,
+  "started_utc": "2026-11-13T10:44:11.635664+00:00",
+  "python": "3.12.14",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "scope": "single process, loopback, serialized demo writes, fresh temporary DB per level; no external targets",
+  "limitations": "closed-loop short bursts, new connection per request; not sustained load, real traffic, distributed capacity or attack resistance",
+  "levels": [
+    {
+      "concurrency": 1,
+      "phases": {
+        "same_key_booking": {
+          "requests": 64,
+          "elapsed_seconds": 0.4194,
+          "completed_requests_per_second": 152.6,
+          "p50_ms": 6.06,
+          "p95_ms": 8.5,
+          "p99_ms": 12.07,
+          "http_counts": {
+            "200": 64
+          },
+          "outcome_counts": {
+            "BOOKED": 64
+          },
+          "transport_errors": 0
+        },
+        "same_key_cancellation": {
+          "requests": 64,
+          "elapsed_seconds": 0.3904,
+          "completed_requests_per_second": 163.95,
+          "p50_ms": 5.7,
+          "p95_ms": 7.94,
+          "p99_ms": 17.22,
+          "http_counts": {
+            "200": 64
+          },
+          "outcome_counts": {
+            "CANCELLED": 64
+          },
+          "transport_errors": 0
+        },
+        "distinct_booking_sellout": {
+          "requests": 64,
+          "elapsed_seconds": 0.6612,
+          "completed_requests_per_second": 96.8,
+          "p50_ms": 8.14,
+          "p95_ms": 29.16,
+          "p99_ms": 40.91,
+          "http_counts": {
+            "200": 64
+          },
+          "outcome_counts": {
+            "BOOKED": 4,
+            "REJECTED": 60
+          },
+          "transport_errors": 0
+        },
+        "state_reads": {
+          "requests": 64,
+          "elapsed_seconds": 0.4366,
+          "completed_requests_per_second": 146.58,
+          "p50_ms": 5.57,
+          "p95_ms": 11.06,
+          "p99_ms": 43.41,
+          "http_counts": {
+            "200": 64
+          },
+          "outcome_counts": {
+            "READ": 64
+          },
+          "transport_errors": 0
+        }
+      },
+      "checks": {
+        "replays_one_record": true,
+        "replays_one_event": true,
+        "replays_three_room_nights": true,
+        "cancellation_released_once": true,
+        "distinct_expected_capacity": true,
+        "distinct_expected_room_nights": true,
+        "database_audit_healthy": true
+      },
+      "all_checks_passed": true,
+      "final_booked": 4,
+      "final_room_nights": 12
+    },
+    {
+      "concurrency": 4,
+      "phases": {
+        "same_key_booking": {
+          "requests": 64,
+          "elapsed_seconds": 0.4501,
+          "completed_requests_per_second": 142.19,
+          "p50_ms": 27.21,
+          "p95_ms": 37.51,
+          "p99_ms": 40.2,
+          "http_counts": {
+            "200": 64
+          },
+          "outcome_counts": {
+            "BOOKED": 64
+          },
+          "transport_errors": 0
+        },
+        "same_key_cancellation": {
+          "requests": 64,
+          "elapsed_seconds": 0.4354,
+          "completed_requests_per_second": 146.99,
+          "p50_ms": 22.99,
+          "p95_ms": 45.53,
+          "p99_ms": 60.11,
+          "http_counts": {
+            "200": 64
+          },
+          "outcome_counts": {
+            "CANCELLED": 64
+          },
+          "transport_errors": 0
+        },
+        "distinct_booking_sellout": {
+          "requests": 64,
+          "elapsed_seconds": 0.4914,
+          "completed_requests_per_second": 130.24,
+          "p50_ms": 28.56,
+          "p95_ms": 34.13,
+          "p99_ms": 50.66,
+          "http_counts": {
+            "200": 64
+          },
+          "outcome_counts": {
+            "BOOKED": 4,
+            "REJECTED": 60
+          },
+          "transport_errors": 0
+        },
+        "state_reads": {
+          "requests": 64,
+          "elapsed_seconds": 0.451,
+          "completed_requests_per_second": 141.91,
+          "p50_ms": 20.77,
+          "p95_ms": 64.56,
+          "p99_ms": 70.92,
+          "http_counts": {
+            "200": 64
+          },
+          "outcome_counts": {
+            "READ": 64
+          },
+          "transport_errors": 0
+        }
+      },
+      "checks": {
+        "replays_one_record": true,
+        "replays_one_event": true,
+        "replays_three_room_nights": true,
+        "cancellation_released_once": true,
+        "distinct_expected_capacity": true,
+        "distinct_expected_room_nights": true,
+        "database_audit_healthy": true
+      },
+      "all_checks_passed": true,
+      "final_booked": 4,
+      "final_room_nights": 12
+    },
+    {
+      "concurrency": 8,
+      "phases": {
+        "same_key_booking": {
+          "requests": 64,
+          "elapsed_seconds": 0.4066,
+          "completed_requests_per_second": 157.42,
+          "p50_ms": 47.3,
+          "p95_ms": 55.21,
+          "p99_ms": 67.57,
+          "http_counts": {
+            "200": 64
+          },
+          "outcome_counts": {
+            "BOOKED": 64
+          },
+          "transport_errors": 0
+        },
+        "same_key_cancellation": {
+          "requests": 64,
+          "elapsed_seconds": 0.5069,
+          "completed_requests_per_second": 126.26,
+          "p50_ms": 61.4,
+          "p95_ms": 82.18,
+          "p99_ms": 85.02,
+          "http_counts": {
+            "200": 64
+          },
+          "outcome_counts": {
+            "CANCELLED": 64
+          },
+          "transport_errors": 0
+        },
+        "distinct_booking_sellout": {
+          "requests": 64,
+          "elapsed_seconds": 0.4991,
+          "completed_requests_per_second": 128.24,
+          "p50_ms": 61.45,
+          "p95_ms": 68.2,
+          "p99_ms": 70.26,
+          "http_counts": {
+            "200": 64
+          },
+          "outcome_counts": {
+            "BOOKED": 4,
+            "REJECTED": 60
+          },
+          "transport_errors": 0
+        },
+        "state_reads": {
+          "requests": 64,
+          "elapsed_seconds": 1.0488,
+          "completed_requests_per_second": 61.02,
+          "p50_ms": 37.72,
+          "p95_ms": 206.54,
+          "p99_ms": 1043.52,
+          "http_counts": {
+            "200": 64
+          },
+          "outcome_counts": {
+            "READ": 64
+          },
+          "transport_errors": 0
+        }
+      },
+      "checks": {
+        "replays_one_record": true,
+        "replays_one_event": true,
+        "replays_three_room_nights": true,
+        "cancellation_released_once": true,
+        "distinct_expected_capacity": true,
+        "distinct_expected_room_nights": true,
+        "database_audit_healthy": true
+      },
+      "all_checks_passed": true,
+      "final_booked": 4,
+      "final_room_nights": 12
+    },
+    {
+      "concurrency": 16,
+      "phases": {
+        "same_key_booking": {
+          "requests": 64,
+          "elapsed_seconds": 1.0502,
+          "completed_requests_per_second": 60.94,
+          "p50_ms": 79.52,
+          "p95_ms": 1024.53,
+          "p99_ms": 1044.51,
+          "http_counts": {
+            "200": 64
+          },
+          "outcome_counts": {
+            "BOOKED": 64
+          },
+          "transport_errors": 0
+        },
+        "same_key_cancellation": {
+          "requests": 64,
+          "elapsed_seconds": 1.0395,
+          "completed_requests_per_second": 61.57,
+          "p50_ms": 139.56,
+          "p95_ms": 243.26,
+          "p99_ms": 1024.33,
+          "http_counts": {
+            "200": 64
+          },
+          "outcome_counts": {
+            "CANCELLED": 64
+          },
+          "transport_errors": 0
+        },
+        "distinct_booking_sellout": {
+          "requests": 64,
+          "elapsed_seconds": 1.0551,
+          "completed_requests_per_second": 60.66,
+          "p50_ms": 96.38,
+          "p95_ms": 103.63,
+          "p99_ms": 1040.03,
+          "http_counts": {
+            "200": 64
+          },
+          "outcome_counts": {
+            "BOOKED": 4,
+            "REJECTED": 60
+          },
+          "transport_errors": 0
+        },
+        "state_reads": {
+          "requests": 64,
+          "elapsed_seconds": 1.056,
+          "completed_requests_per_second": 60.6,
+          "p50_ms": 80.38,
+          "p95_ms": 87.57,
+          "p99_ms": 1039.49,
+          "http_counts": {
+            "200": 64
+          },
+          "outcome_counts": {
+            "READ": 64
+          },
+          "transport_errors": 0
+        }
+      },
+      "checks": {
+        "replays_one_record": true,
+        "replays_one_event": true,
+        "replays_three_room_nights": true,
+        "cancellation_released_once": true,
+        "distinct_expected_capacity": true,
+        "distinct_expected_room_nights": true,
+        "database_audit_healthy": true
+      },
+      "all_checks_passed": true,
+      "final_booked": 4,
+      "final_room_nights": 12
+    },
+    {
+      "concurrency": 32,
+      "phases": {
+        "same_key_booking": {
+          "requests": 64,
+          "elapsed_seconds": 1.0821,
+          "completed_requests_per_second": 59.15,
+          "p50_ms": 151.93,
+          "p95_ms": 1046.37,
+          "p99_ms": 1053.27,
+          "http_counts": {
+            "200": 64
+          },
+          "outcome_counts": {
+            "BOOKED": 64
+          },
+          "transport_errors": 0
+        },
+        "same_key_cancellation": {
+          "requests": 64,
+          "elapsed_seconds": 1.0781,
+          "completed_requests_per_second": 59.37,
+          "p50_ms": 183.08,
+          "p95_ms": 1038.86,
+          "p99_ms": 1055.94,
+          "http_counts": {
+            "200": 64
+          },
+          "outcome_counts": {
+            "CANCELLED": 64
+          },
+          "transport_errors": 0
+        },
+        "distinct_booking_sellout": {
+          "requests": 64,
+          "elapsed_seconds": 1.258,
+          "completed_requests_per_second": 50.87,
+          "p50_ms": 160.46,
+          "p95_ms": 1069.98,
+          "p99_ms": 1231.26,
+          "http_counts": {
+            "200": 64
+          },
+          "outcome_counts": {
+            "BOOKED": 4,
+            "REJECTED": 60
+          },
+          "transport_errors": 0
+        },
+        "state_reads": {
+          "requests": 64,
+          "elapsed_seconds": 1.0856,
+          "completed_requests_per_second": 58.95,
+          "p50_ms": 99.91,
+          "p95_ms": 1055.09,
+          "p99_ms": 1064.9,
+          "http_counts": {
+            "200": 64
+          },
+          "outcome_counts": {
+            "READ": 64
+          },
+          "transport_errors": 0
+        }
+      },
+      "checks": {
+        "replays_one_record": true,
+        "replays_one_event": true,
+        "replays_three_room_nights": true,
+        "cancellation_released_once": true,
+        "distinct_expected_capacity": true,
+        "distinct_expected_room_nights": true,
+        "database_audit_healthy": true
+      },
+      "all_checks_passed": true,
+      "final_booked": 4,
+      "final_room_nights": 12
+    }
+  ]
+}

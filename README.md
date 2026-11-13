@@ -48,6 +48,16 @@ python -m hotel_sim --input data/week.json --output results/week.json
 
 部分审计脚本将报告写入 `results/`；生成结果和数据库不纳入源码仓库。
 
+## HTTP 并发实验
+
+新增独立临时服务的分级并发脚本：
+
+```bash
+python scripts/benchmark_http.py
+```
+
+报告吞吐、p95/p99、传输错误及预订/取消后的库存核对。[方法与实测结果](docs/HTTP_BENCHMARK.md)。这是合成短时本机实验，不是生产容量或抗攻击证明。
+
 ## 项目结构
 
 - `hotel_demo/`：本机 HTTP 服务、恢复查询和原生 HTML/CSS/JavaScript 界面。
