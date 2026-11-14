@@ -58,6 +58,10 @@ python scripts/benchmark_http.py
 
 报告吞吐、p95/p99、传输错误及预订/取消后的库存核对。[方法与实测结果](docs/HTTP_BENCHMARK.md)。这是合成短时本机实验，不是生产容量或抗攻击证明。
 
+## 优先级调度教学实验
+
+附有独立的抢占／非抢占优先级队列示例和 1,000 个固定种子合成案例对照验证。[规则、实测与边界](docs/PRIORITY_SCHEDULING.md)。这是算法教学，不接入酒店预订事务，也不是酒店并发或抗攻击测试。运行 `python -m scheduling_lab` 查看时间线。
+
 ## 项目结构
 
 - `hotel_demo/`：本机 HTTP 服务、恢复查询和原生 HTML/CSS/JavaScript 界面。
