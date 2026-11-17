@@ -1,0 +1,54 @@
+{
+  "utc": "20261104T043822041391Z",
+  "syntax_valid": true,
+  "documentation_links_valid": true,
+  "seed_csv_bytes_unchanged": {
+    "hotels.csv": true,
+    "room_types.csv": true,
+    "customers.csv": true,
+    "nightly_inventory.csv": true,
+    "reservations.csv": true,
+    "reservation_nights.csv": true,
+    "inventory_events.csv": true
+  },
+  "transaction_and_schema_unchanged": {
+    "hotel/service.py": true,
+    "hotel/schema.sql": true
+  },
+  "historical_reports_unchanged_from_delivery_archive": {
+    "reports/503-review-20261104T041111248192Z.json": true,
+    "reports/cli-smoke.json": true,
+    "reports/functional-20261104T040204330539Z.json": true,
+    "reports/functional-20261104T040204330539Z.txt": true,
+    "reports/load-20261104T035926232657Z.json": true,
+    "reports/reproduction-20261104T040217946697Z.json": true
+  },
+  "baseline_snapshot_hashes_valid": true,
+  "runtime_sources_match_measured_version": {
+    "hotel/api.py": true,
+    "hotel/service.py": true,
+    "hotel/schema.sql": true,
+    "scripts/http_client.py": true,
+    "scripts/load_matrix.py": true
+  },
+  "current_cli_smoke_ok": true,
+  "current_source_sha256": {
+    "hotel/__init__.py": "26d643fa2bcd047cc0bbae410179dbc3bb9b74283678396fc8686e06911213fb",
+    "hotel/api.py": "86af045a5e444b8f7ce4fcbb8588c6fe7a48c9b74e678703d99f3081f996006f",
+    "hotel/service.py": "3399ebe58aefc3efaaffb9679b74f22cbb5d0129835714529dca97cbcba585e6",
+    "scripts/__init__.py": "30e19dfdcfb261188f5d939b7e0a2d3d4bddabe7b85b0efeb06558ece363150d",
+    "scripts/http_client.py": "0bd7ef9e6cd90165808278c3ab7b8e1c3df4be8e005e931f5cf4937aa59d69f4",
+    "scripts/load.py": "f0864494737db7a9ca484b5897e2ef80d89d7ef650e97ccbd05f7840cfa7eca7",
+    "scripts/load_matrix.py": "8d6c6a08480b902b9507d379508823562d0a6c9b19faaa9e8819a6601dad74f7",
+    "scripts/package_delivery.py": "4e45ad47c10d7a34533f3b1dd52beccf65b6681759a0c5dd216b8f81545f9bb3",
+    "scripts/reproduce.py": "220d6e3632151d21775cfbef6ca2c43d9ed51c416a6d546c073afa2c7f66bdae",
+    "scripts/review_503.py": "8824a3a4dbebcfeb93357415b435a35af4f4d5e37c08bd1f88596b30daa9929e",
+    "scripts/seed.py": "ff381fb5306354631033788a2db992386602d0b87593d71fa11ce17e90f8eba3",
+    "scripts/support.py": "58db09516c6c60119623be4e544902d8037c05d94a64b9ff1c50974812677129",
+    "scripts/verify.py": "91728801df11026372e101bf594e6c867acaae7976f5996de9d01b9a0f515b9b",
+    "tests/__init__.py": "2c00e437480dff2124e7a3d5725b075a7a4e465a52f571327a9a5cc4c0a435e9",
+    "tests/test_booking.py": "ce5a30a522da63e701f3925eb718dba16750c6bbf511cd49b0900e025a448902",
+    "tests/test_bounded_http.py": "70626e8c945213fbd86e0854db2c44de1390292c0f65056b25fe28333ccdd9a2"
+  },
+  "note": "Final retry-client test was added after the measured matrix; runtime implementation files match the measurement hashes."
+}

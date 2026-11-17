@@ -1,0 +1,15 @@
+{
+  "synthetic": true,
+  "utc": "20261104T040217946697Z",
+  "csv_hash_match": {
+    "hotels.csv": true,
+    "room_types.csv": true,
+    "customers.csv": true,
+    "nightly_inventory.csv": true,
+    "reservations.csv": true,
+    "reservation_nights.csv": true,
+    "inventory_events.csv": true
+  },
+  "manifest_equal": true,
+  "passed": true
+}

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>酒店并发实验台 · 本机合成数据</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#edf2f7;color:#172c43;font:15px/1.6 system-ui,"Microsoft YaHei",sans-serif}main{max-width:1250px;margin:auto;padding:24px}header,section{background:#fff;border:1px solid #d5dfe9;border-radius:12px;padding:22px;margin-bottom:18px}h1{margin:5px 0;font-size:28px}h2{font-size:20px;margin:0 0 12px}.tag{color:#a44512;font-weight:700}.muted{color:#52667c}form{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}label{display:flex;flex-direction:column;font-weight:600}input,button{font:inherit;padding:9px;border:1px solid #b7c9d9;border-radius:6px}button{background:#176778;color:white;cursor:pointer}button:disabled{background:#7a9298;cursor:wait}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.card{background:#f0f6fa;padding:15px;border-radius:8px}.number{font-size:27px;font-weight:750}.flow{padding:15px;background:#fff4de;border-left:4px solid #bc7e16}.scroll{overflow:auto;max-height:450px}table{width:100%;border-collapse:collapse;font-size:13px}td,th{text-align:left;border-bottom:1px solid #d8e4ee;padding:7px;vertical-align:top}th{position:sticky;top:0;background:#edf4f9}pre{background:#11293d;color:#e3eff9;padding:15px;overflow:auto;font-size:13px;max-height:440px}#status{white-space:pre-wrap}#codeButtons{display:flex;gap:8px;flex-wrap:wrap}.error{color:#a62929}@media(max-width:800px){form,.cards{grid-template-columns:repeat(2,1fr)}main{padding:12px}}
+</style><main>
+<header><div class="tag">仅本机 · 全部合成数据 · 独立临时库</div><h1>酒店并发实验台</h1><p><a href="/planning">进入：真实房型需求与同意升级策略对比</a></p><p>调节少量请求，观察真实 SQLite 预订事务、重复请求、取消回补与再次抢房。每次运行新建数据库，不修改既有酒店数据或销售项目。</p><p class="muted">这是演示 API 内部线程池直接调用业务事务，不是浏览器发出 N 个 HTTP 请求，也不是线上容量测试。事件来自真实执行；下方流程说明属于示意。</p></header>
+<section><h2>1. 设置一轮实验</h2><form id="controls">
+<label>每日房量（1–30）<input name="rooms" type="number" min="1" max="30" value="8" required></label>
+<label>首轮预订数（1–80）<input name="requests" type="number" min="1" max="80" value="24" required></label>
+<label>并发线程（1–12）<input name="concurrency" type="number" min="1" max="12" value="8" required></label>
+<label>每单间数（1–3）<input name="quantity" type="number" min="1" max="3" value="1" required></label>
+<label>入住日期（2027年）<input name="check_in" type="date" min="2027-01-01" max="2027-12-31" value="2027-01-01" required></label>
+<label>退房日期（最多7晚）<input name="check_out" type="date" min="2027-01-02" max="2028-01-01" value="2027-01-04" required></label>
+<label>取消前几单（0–10）<input name="cancel_orders" type="number" min="0" max="10" value="3" required></label>
+<label>补售请求（0–30）<input name="refill_requests" type="number" min="0" max="30" value="10" required></label>
+<button id="run" type="submit">创建隔离库并真实执行</button></form><p class="muted">入住日包含，退房日不包含。成功订单会自动做4次同键重放；每个取消目标会重复取消2次。单轮最多134个业务调用。一次只运行一轮，每次启动最多20轮，不提供任意文件路径或数据导入。</p><p id="status" role="status">尚未执行。</p></section>
+<section><h2>2. 实际结果与阶段房态</h2><div class="cards"><div class="card">首轮建单<div class="number" id="created">—</div></div><div class="card">首轮拒绝<div class="number" id="rejected">—</div></div><div class="card">不同订单取消<div class="number" id="cancelled">—</div></div><div class="card">补售建单<div class="number" id="refilled">—</div></div></div><p id="concurrency" class="muted">实际并发与对账结果将在执行后显示。</p><div class="scroll"><table><thead><tr><th>实际阶段</th><th>区间瓶颈余量</th><th>逐晚余量 / 容量</th><th>对账</th></tr></thead><tbody id="phases"></tbody></table></div></section>
+<section><h2>3. 实际执行事件</h2><p class="muted">“开始尝试”不等于拿到数据库锁；“获得写锁”是在 BEGIN IMMEDIATE 实际返回后记录。线程重叠是真实并发，SQLite 写事务仍串行。事件序号是应用观察顺序，不代表数据库内部所有操作的完整跟踪。阶段房态在该批任务全部结束后读取。</p><div class="scroll"><table><thead><tr><th>序号 / 时间(ms)</th><th>线程 / 操作</th><th>事件</th><th>结果</th></tr></thead><tbody id="events"></tbody></table></div></section>
+<section><h2>4. 示意解释与当前项目代码</h2><div class="flow">示意：独立合成库 → 多线程同时尝试 → BEGIN IMMEDIATE 获得写锁 → 检查幂等键与每晚库存 → 原子提交或整单回滚 → 重复取消只回补一次 → 独立对账。此说明不是额外执行结果。</div><p>点击查看当前项目真实源代码及行号。只允许读取以下固定函数。</p><div id="codeButtons"><button data-code="transaction">事务与写锁</button><button data-code="reserve">预订、防超卖、幂等</button><button data-code="cancel">取消与回补</button><button data-code="nights">日期区间</button></div><p id="codeLocation"></p><pre id="code">请选择代码位置。</pre></section>
+<footer class="muted">本机教学实验，未验证 PostgreSQL 或生产容量；没有真实住客、支付、认证账户或外部调用。运行记录位于当前项目 .runtime/interactive-hotel；重启服务可开启新的20轮额度，不会删除旧记录。</footer></main>
+<script nonce="__TOKEN__">
+const token="__TOKEN__";let busy=false;
+const el=id=>document.getElementById(id);
+async function api(path,options={}){const r=await fetch(path,{...options,headers:{"X-Demo-Token":token,...options.headers}});const d=await r.json();if(!r.ok)throw Error(d.error+": "+d.message);return d;}
+function cell(row,text){const c=document.createElement("td");c.textContent=text;row.append(c);}
+function render(d){
+ const s=d.summary||{};el("created").textContent=s.initial_created??"执行中";el("rejected").textContent=s.initial_rejected??"执行中";el("cancelled").textContent=s.distinct_cancelled??"执行中";el("refilled").textContent=s.refill_created??"执行中";
+ el("concurrency").textContent="实际重叠业务尝试峰值："+d.peak_overlapping_attempts+"；累计观察到线程ID："+d.attempt_threads.length+"；最终对账："+(d.audit?String(d.audit.ok):"待执行")+"。这是事务演示，不是HTTP吞吐量。";
+ el("phases").replaceChildren();for(const p of d.phases){const r=document.createElement("tr");cell(r,p.name);cell(r,p.availability.available);cell(r,p.availability.nights.map(n=>n.stay_date+": "+n.available+"/"+n.capacity).join("；"));cell(r,p.audit.ok?"通过":"失败");el("phases").append(r);}
+ el("events").replaceChildren();for(const e of d.events){const r=document.createElement("tr");cell(r,e.seq+" / "+e.elapsed_ms);cell(r,e.thread+" / "+(e.operation||"阶段"));cell(r,e.kind);cell(r,e.message+(e.error?" ["+e.error+"]":"")+(e.status?" ["+e.status+(e.replayed?", 幂等返回":"")+"]":"")+(e.available!==undefined?" [剩余"+e.available+"]":""));el("events").append(r);}
+ el("status").textContent="运行 "+d.id+" · "+d.status+(d.error?" · "+d.error:"");
+}
+el("controls").addEventListener("submit",async e=>{e.preventDefault();if(busy)return;busy=true;el("run").disabled=true;try{const data={};for(const [k,v] of new FormData(e.target))data[k]=k.startsWith("check_")?v:Number(v);el("status").textContent="正在创建独立库并执行真实事务…";const run=await api("/api/runs",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(data)});for(;;){const d=await api("/api/runs/"+run.id);render(d);if(d.status!=="running")break;await new Promise(r=>setTimeout(r,200));}}catch(err){el("status").textContent=String(err);}finally{busy=false;el("run").disabled=false;}});
+for(const button of document.querySelectorAll("[data-code]"))button.addEventListener("click",async()=>{try{const d=await api("/api/source/"+button.dataset.code);el("codeLocation").textContent=d.path+"："+d.start_line+" 起（当前文件）";el("code").textContent=d.code.split("\n").map((line,i)=>(d.start_line+i)+": "+line).join("\n");}catch(e){el("code").textContent=String(e);}});
+</script></html>
+

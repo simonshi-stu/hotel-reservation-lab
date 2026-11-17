@@ -7,7 +7,7 @@ import random
 
 
 def write(path, data):
-    path.write_text(json.dumps(data, ensure_ascii=False, indent=2, sort_keys=True)+'\n', encoding='utf-8')
+    path.write_text(json.dumps(data, ensure_ascii=False, indent=2, sort_keys=True)+'\n', encoding='utf-8', newline='\n')
 
 
 def week(seed=20261106):

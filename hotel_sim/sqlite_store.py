@@ -17,6 +17,15 @@ from .scenario import build_allocator
 from .sqlite_schema import STATEMENTS, VERSION
 
 
+def _is_busy_error(exc):
+    """Use extended result codes on 3.11+, exact SQLite text on Python 3.10."""
+    code = getattr(exc, 'sqlite_errorcode', None)
+    if code is not None:
+        return (code & 255) in (5, 6)  # SQLITE_BUSY, SQLITE_LOCKED
+    return str(exc).lower() in ('database is locked', 'database table is locked',
+                                'database schema is locked')
+
+
 class IdempotencyConflict(ValueError):
     pass
 
@@ -95,7 +104,7 @@ class SQLiteHotel:
             connection.commit()
         except sqlite3.OperationalError as exc:
             connection.rollback()
-            if (getattr(exc, 'sqlite_errorcode', 0) & 255) in (sqlite3.SQLITE_BUSY, sqlite3.SQLITE_LOCKED):
+            if _is_busy_error(exc):
                 raise DatabaseBusy('database busy; retry the same request ID and body') from None
             raise
         except BaseException:
@@ -161,7 +170,7 @@ class SQLiteHotel:
             try:
                 journal_mode = connection.execute('PRAGMA journal_mode=WAL').fetchone()[0]
             except sqlite3.OperationalError as exc:
-                if (getattr(exc, 'sqlite_errorcode', 0) & 255) not in (sqlite3.SQLITE_BUSY, sqlite3.SQLITE_LOCKED):
+                if not _is_busy_error(exc):
                     raise
                 # Schema/configuration already committed. A reader can prevent
                 # this optional mode change; do not falsely report rollback.
@@ -303,7 +312,7 @@ class SQLiteHotel:
                 self._checkpoint('reconcile_snapshot', connection)
                 return audit(connection, config, mode, limit)
         except sqlite3.OperationalError as exc:
-            if (getattr(exc, 'sqlite_errorcode', 0) & 255) in (sqlite3.SQLITE_BUSY, sqlite3.SQLITE_LOCKED):
+            if _is_busy_error(exc):
                 raise DatabaseBusy('reconciliation temporarily blocked; retry without modifying data') from None
             return {'healthy': False, 'verification_complete': False, 'issue_count': 1,
                     'issues': ['reconciliation_unavailable:missing_or_malformed_storage'], 'truncated': False}

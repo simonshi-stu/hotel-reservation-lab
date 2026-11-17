@@ -1,0 +1,394 @@
+{
+  "source": "local SQLite inventory lab, 2026-11-17",
+  "files": [
+    {
+      "path": "hotel/__init__.py",
+      "sha256": "26d643fa2bcd047cc0bbae410179dbc3bb9b74283678396fc8686e06911213fb"
+    },
+    {
+      "path": "hotel/api.py",
+      "sha256": "86af045a5e444b8f7ce4fcbb8588c6fe7a48c9b74e678703d99f3081f996006f"
+    },
+    {
+      "path": "hotel/demo.html",
+      "sha256": "e14b6a498cf223a466422e5fa5bd31871257b58e2ab8e032c444547c6f0aba17"
+    },
+    {
+      "path": "hotel/demo.py",
+      "sha256": "66bde6fd597b806df820cf9fd8a248a6dfe0c6b489e5bf59d341d849e3025a5f"
+    },
+    {
+      "path": "hotel/planning.html",
+      "sha256": "14efc387cb2e05f741ebac4fbf7d6d44022f6beff346d9febdfa770ff609185f"
+    },
+    {
+      "path": "hotel/planning.py",
+      "sha256": "222170813dd1923d4307431161832fff0dc63cfb1ebb8c02cc4351cfe9fa7d62"
+    },
+    {
+      "path": "hotel/schema.sql",
+      "sha256": "d99dfa098e26b57048b3474fb0735faf967567504d39ca2aad9fb9c09638f247"
+    },
+    {
+      "path": "hotel/service.py",
+      "sha256": "3399ebe58aefc3efaaffb9679b74f22cbb5d0129835714529dca97cbcba585e6"
+    },
+    {
+      "path": "scripts/__init__.py",
+      "sha256": "30e19dfdcfb261188f5d939b7e0a2d3d4bddabe7b85b0efeb06558ece363150d"
+    },
+    {
+      "path": "scripts/compare_planning.py",
+      "sha256": "7200009e2871ea581e71d111b20a42667fd66cd4b89b3b651ab8e40511169ce5"
+    },
+    {
+      "path": "scripts/http_client.py",
+      "sha256": "0bd7ef9e6cd90165808278c3ab7b8e1c3df4be8e005e931f5cf4937aa59d69f4"
+    },
+    {
+      "path": "scripts/load.py",
+      "sha256": "f0864494737db7a9ca484b5897e2ef80d89d7ef650e97ccbd05f7840cfa7eca7"
+    },
+    {
+      "path": "scripts/load_matrix.py",
+      "sha256": "8d6c6a08480b902b9507d379508823562d0a6c9b19faaa9e8819a6601dad74f7"
+    },
+    {
+      "path": "scripts/package_delivery.py",
+      "sha256": "4e45ad47c10d7a34533f3b1dd52beccf65b6681759a0c5dd216b8f81545f9bb3"
+    },
+    {
+      "path": "scripts/policy_frontier.py",
+      "sha256": "ac1824513debf9489ba511b72c8a903df6c543b3330446daa9909ae323fc95de"
+    },
+    {
+      "path": "scripts/reproduce.py",
+      "sha256": "220d6e3632151d21775cfbef6ca2c43d9ed51c416a6d546c073afa2c7f66bdae"
+    },
+    {
+      "path": "scripts/review_503.py",
+      "sha256": "8824a3a4dbebcfeb93357415b435a35af4f4d5e37c08bd1f88596b30daa9929e"
+    },
+    {
+      "path": "scripts/run.ps1",
+      "sha256": "771373b594b06b17cbcef472fde9872cf46068ff0dd1105043f5dfac975df499"
+    },
+    {
+      "path": "scripts/seed.py",
+      "sha256": "ff381fb5306354631033788a2db992386602d0b87593d71fa11ce17e90f8eba3"
+    },
+    {
+      "path": "scripts/support.py",
+      "sha256": "58db09516c6c60119623be4e544902d8037c05d94a64b9ff1c50974812677129"
+    },
+    {
+      "path": "scripts/verify.py",
+      "sha256": "91728801df11026372e101bf594e6c867acaae7976f5996de9d01b9a0f515b9b"
+    },
+    {
+      "path": "tests/__init__.py",
+      "sha256": "2c00e437480dff2124e7a3d5725b075a7a4e465a52f571327a9a5cc4c0a435e9"
+    },
+    {
+      "path": "tests/test_booking.py",
+      "sha256": "ce5a30a522da63e701f3925eb718dba16750c6bbf511cd49b0900e025a448902"
+    },
+    {
+      "path": "tests/test_bounded_http.py",
+      "sha256": "70626e8c945213fbd86e0854db2c44de1390292c0f65056b25fe28333ccdd9a2"
+    },
+    {
+      "path": "tests/test_demo.py",
+      "sha256": "45191fec2f63ea294c4edf3f99fdc13ac0a7db9f74343971013ea40be6a30e00"
+    },
+    {
+      "path": "tests/test_planning.py",
+      "sha256": "2ce807999bd5c11773eab11872d7dc4e8bed255b47eaae739cd1f5c9e4df3a61"
+    },
+    {
+      "path": "docs/01-data.md",
+      "sha256": "ceb1b174a02d40b348b50209be280c7368cde15577c3fc63da798501d34ec008"
+    },
+    {
+      "path": "docs/02-design.md",
+      "sha256": "311c96ee971db08f129d8934f676ce75565c57d2557154b123a2826f23f86b74"
+    },
+    {
+      "path": "docs/03-verification.md",
+      "sha256": "99d480a4f4138dddd08a428647882bc66e50f6dc3d51accaa0eb20004946ce99"
+    },
+    {
+      "path": "docs/04-503-review.md",
+      "sha256": "71b66d554152a117758e8587e5327c1041ecd9cc85b98fed30d409cc9abd7142"
+    },
+    {
+      "path": "docs/05-bounded-http.md",
+      "sha256": "e11b8806c701508f3dd3af85d7ceb3dd8e0f7c73310599027c9656d3d17c4195"
+    },
+    {
+      "path": "docs/06-interactive-demo.md",
+      "sha256": "fc54c0c40c84a31a9d8d59b4525c688efa81fd6a1196edfd6c7b787ecc63e349"
+    },
+    {
+      "path": "docs/07-room-planning.md",
+      "sha256": "289c31521968b741a24f525a2526765e63e67bc9c74d22fb16ba1a92e916967c"
+    },
+    {
+      "path": "docs/08-policy-frontier.md",
+      "sha256": "807aed9b2ad1c2cc3f46ee54c763bf01fe4ee8427faf78fd62774b72950cb4b8"
+    },
+    {
+      "path": "data/synthetic-v1/customers.csv",
+      "sha256": "0d78a2ba31227217b32bd53a476178e2c609cda8b7b4c8f9ca8c7d54b268ea4c"
+    },
+    {
+      "path": "data/synthetic-v1/hotels.csv",
+      "sha256": "6cdefea7858facc1c131743596ebf141fa272ce6969ad5d35b22b718eb1f1ee4"
+    },
+    {
+      "path": "data/synthetic-v1/inventory_events.csv",
+      "sha256": "aef9baac9ea62f3c32fac91422c212805962ed84e13ed6ffd28241e6c9e1de34"
+    },
+    {
+      "path": "data/synthetic-v1/manifest.json",
+      "sha256": "ff92007935e842fda2911692e50f8880f1adae2ee4f95e6cdb731819fc1783e0"
+    },
+    {
+      "path": "data/synthetic-v1/nightly_inventory.csv",
+      "sha256": "794c6732b74c097fd5fd8976e0a18c14df155e3479fc05d0f4e8c8857c1f4a80"
+    },
+    {
+      "path": "data/synthetic-v1/reservation_nights.csv",
+      "sha256": "e4d8de59a97606f359a6630f3f86ca3bb66bc77a20c7ff2131d0a01eb9438edb"
+    },
+    {
+      "path": "data/synthetic-v1/reservations.csv",
+      "sha256": "db97b1cf102d203203176eaf7d33af65532ee6d16c032a670d1774c36121d8a6"
+    },
+    {
+      "path": "data/synthetic-v1/room_types.csv",
+      "sha256": "b637ea520c5da08160fda19b21d6317e5a7b6c312d5d891f0c2c88a39eb7c3eb"
+    },
+    {
+      "path": "reports/503-review-20261104T041111248192Z.json",
+      "sha256": "8915b4df80f5a6740f67356c7bd82c8dcf4cca74109fca957243fff965a286a2"
+    },
+    {
+      "path": "reports/baseline-before-bounded-http-20261104/docs/02-design.md",
+      "sha256": "27736aa9b0a4bdff8c9b15541b089c56a12f162ec15edf88027d1f69d17752d5"
+    },
+    {
+      "path": "reports/baseline-before-bounded-http-20261104/docs/03-verification.md",
+      "sha256": "cb135c0e626cb233d3d11ede511c0be46f064860134dd83c606be5ce26865eec"
+    },
+    {
+      "path": "reports/baseline-before-bounded-http-20261104/docs/04-503-review.md",
+      "sha256": "80731dd637b8c73d3a2cf20f4316161bf13dfbaff4af76aec0d9d62ee7ab0824"
+    },
+    {
+      "path": "reports/baseline-before-bounded-http-20261104/hotel/api.py",
+      "sha256": "a9c2a4fc9d3aa0371c121895253d9c8d1ee22b9ecabe721f493e0dc23286b2e2"
+    },
+    {
+      "path": "reports/baseline-before-bounded-http-20261104/hotel/schema.sql",
+      "sha256": "d99dfa098e26b57048b3474fb0735faf967567504d39ca2aad9fb9c09638f247"
+    },
+    {
+      "path": "reports/baseline-before-bounded-http-20261104/hotel/service.py",
+      "sha256": "3399ebe58aefc3efaaffb9679b74f22cbb5d0129835714529dca97cbcba585e6"
+    },
+    {
+      "path": "reports/baseline-before-bounded-http-20261104/README.md",
+      "sha256": "c868c68ac3602741292fa36c8baea92f75caa56449c3ab13e76eddc8973c4c18"
+    },
+    {
+      "path": "reports/baseline-before-bounded-http-20261104/scripts/load.py",
+      "sha256": "2feae3217194a67b67b5e1a9820aad0cfa04b15887b38f58ca39cfa2511071d8"
+    },
+    {
+      "path": "reports/baseline-before-bounded-http-20261104/scripts/review_503.py",
+      "sha256": "4a05701470525260613e0769db976e2e76543bfedb4a388196e672ed3c427c3b"
+    },
+    {
+      "path": "reports/baseline-before-bounded-http-20261104/sha256.json",
+      "sha256": "217f24189c04823d88b35dc8636358ba5cc9e32736a52cbd0822a795dfa7a4ca"
+    },
+    {
+      "path": "reports/baseline-before-bounded-http-20261104/tests/test_booking.py",
+      "sha256": "555493df7ddbb36c5e15a37f81eab229d4c309d2bc174839c4f0f788996d7662"
+    },
+    {
+      "path": "reports/baseline-before-guarded-planning-20261104/hotel/demo.py",
+      "sha256": "163c91adfeb4f69b0ec538bd9cddac62953c6df55f536ba02e3477f2d4711973"
+    },
+    {
+      "path": "reports/baseline-before-guarded-planning-20261104/hotel/planning.html",
+      "sha256": "0c1dd47e3d902628ca7f7433db5c952136f047bd7b0a21e72a5d66f10dd7267e"
+    },
+    {
+      "path": "reports/baseline-before-guarded-planning-20261104/hotel/planning.py",
+      "sha256": "6bb2629dc9ef1bffd6d62f2af6547046204776a21bfefe5a0e4d1c4453cbbe0c"
+    },
+    {
+      "path": "reports/baseline-before-guarded-planning-20261104/sha256.json",
+      "sha256": "73e69cf6a9b70f03a78ad5efa2b82b4c68d5d6bc11cd2e7e0cbd956ed77abd07"
+    },
+    {
+      "path": "reports/baseline-before-guarded-planning-20261104/tests/test_planning.py",
+      "sha256": "e8d3509e7716a90d137f8d476129b3f1cc3997c46842d1b1ce54c2a64a35fe0d"
+    },
+    {
+      "path": "reports/baseline-before-room-planning-20261104/demo.html",
+      "sha256": "bf0bb523ac511227493d6fe6a17ad58edf2ab92995ec3a103c94bcc3b1c0a756"
+    },
+    {
+      "path": "reports/baseline-before-room-planning-20261104/demo.py",
+      "sha256": "adc7762ba8f274f6d9c92e257ae66b8d6a7b96568bb47f93d29ef711a56be410"
+    },
+    {
+      "path": "reports/baseline-before-room-planning-20261104/sha256.json",
+      "sha256": "9b3ed729fb7c1997ec291c4e1c2a8eac406712976f2c4503327aa6a99078dbc5"
+    },
+    {
+      "path": "reports/bounded-first-sample-source-20261104/hotel/api.py",
+      "sha256": "2de7de009f7b56a948dd881fb809b304b50b128a854fb363a8f742974789ff5c"
+    },
+    {
+      "path": "reports/bounded-first-sample-source-20261104/scripts/http_client.py",
+      "sha256": "71431fb8c482df3b9ee12b84a39bec96c72e6533b1c47a58a1eb6e4bba522eed"
+    },
+    {
+      "path": "reports/bounded-first-sample-source-20261104/scripts/load_matrix.py",
+      "sha256": "ef004420229e01f2951180b6321a39c3a54843f02e9c03ad84d33254cee3dd9b"
+    },
+    {
+      "path": "reports/bounded-first-sample-source-20261104/sha256.json",
+      "sha256": "932d1a0b49b1e9cd21cad7fc5d15183bea8ceec23d8f7ecab17bb677efeb1a91"
+    },
+    {
+      "path": "reports/bounded-first-sample-source-20261104/tests/test_bounded_http.py",
+      "sha256": "5726ed61de838d3d2954158b8f5dc72a3f202efad93cadeaca213ec813505f4d"
+    },
+    {
+      "path": "reports/bounded-http-20261104T042930793227Z.json",
+      "sha256": "7c06a40dd7abf5d6efd85643ccbdf6be82e3a9e93436e30d6fe09648bd68c1cf"
+    },
+    {
+      "path": "reports/bounded-http-20261104T043224232615Z.json",
+      "sha256": "563bdba2260247120580823d0e79f65bb88b5b666ec64d1c9f4ca7e9ef54dd7c"
+    },
+    {
+      "path": "reports/cli-smoke.json",
+      "sha256": "2e4ac0a5d822a546747e831352b8244ba417750461d97daba8eacc84b434638f"
+    },
+    {
+      "path": "reports/demo-browser-check.json",
+      "sha256": "55b7bf12af8a8d34cb339a0bed4d2e135dfda91a3ded2db3a02d92190ee378c3"
+    },
+    {
+      "path": "reports/final-bounded-review-20261104T043822041391Z.json",
+      "sha256": "6d88a1a8dfd52f496c071f60248a38fbf8a70af1e582bab34237cb19b61211dd"
+    },
+    {
+      "path": "reports/functional-20261104T040204330539Z.json",
+      "sha256": "edc3708b2d9285efc2afbf93d69c95e4e5d388bddd390e0ef458e0baa5b5b01b"
+    },
+    {
+      "path": "reports/functional-20261104T040204330539Z.txt",
+      "sha256": "49dc3053b2ae172d1db4b78441f6805340ab8b304cb63bd9e2f34b4a5a408dfb"
+    },
+    {
+      "path": "reports/functional-20261104T042548589782Z.json",
+      "sha256": "dee166079bf7ba7caddabfcaf08b9f81e695df80783559606cec5c49547150d5"
+    },
+    {
+      "path": "reports/functional-20261104T042548589782Z.txt",
+      "sha256": "115e5d0f4a5b8dffe9558bf858097de1f7a6a6d39c6fdbd707140b5df8d21657"
+    },
+    {
+      "path": "reports/functional-20261104T043139184884Z.json",
+      "sha256": "2537fceb9b4ec6a5e6b47f8b1e8c93609d0f408760c223de0873515970384c35"
+    },
+    {
+      "path": "reports/functional-20261104T043139184884Z.txt",
+      "sha256": "daf554c889797a1e748c3898e93fd76b93f7e3760b7ca73b95c4755f7e1db42f"
+    },
+    {
+      "path": "reports/functional-20261104T043355786068Z.json",
+      "sha256": "49b647dcfcaae643c49a9f2cdf58ad8831b8a4ca9bbfd132058d8a6740ca4c86"
+    },
+    {
+      "path": "reports/functional-20261104T043355786068Z.txt",
+      "sha256": "24b3d77564e98e78d0a9bb62220babe9438eb14a9bb261f7c728e7dbd44f9bd5"
+    },
+    {
+      "path": "reports/functional-20261104T050837028046Z.json",
+      "sha256": "fa88f54e910f933996204dd915ab89f24ea1e239e58896447c055419de00adf6"
+    },
+    {
+      "path": "reports/functional-20261104T050837028046Z.txt",
+      "sha256": "828a53bd176bf9ce022bbc6c7fbf9ab171eaed289e4c186f8f23eb68f43ebd27"
+    },
+    {
+      "path": "reports/functional-20261104T085054941778Z.json",
+      "sha256": "d48d2d997cf2b662fdf974eddd728541b389f28796ec508837a451e76364e69f"
+    },
+    {
+      "path": "reports/functional-20261104T085054941778Z.txt",
+      "sha256": "3d7388efe10940032e4869418f9002698919a920623b8d51f6522db0d8771f77"
+    },
+    {
+      "path": "reports/functional-20261104T085629743518Z.json",
+      "sha256": "231ffdc83960dc70c35e3737924b54517e8bf501b4ced9320a62ccd754ffcd73"
+    },
+    {
+      "path": "reports/functional-20261104T085629743518Z.txt",
+      "sha256": "0837c5628add4d3fa3af84a68229d480c09680bfd9a0d1ddb31a6b78a25f6c05"
+    },
+    {
+      "path": "reports/functional-20261104T085923928681Z.json",
+      "sha256": "25e6e5bf6d43afa2d6a07cc081d2eec37d58f70fc851e4260a98cb1d03b90f59"
+    },
+    {
+      "path": "reports/functional-20261104T085923928681Z.txt",
+      "sha256": "5bcd2d074bc733e0c66db151def7aa5a446abf1b01d86c1ca27ea3a65a377c3f"
+    },
+    {
+      "path": "reports/functional-20261104T104300532556Z.json",
+      "sha256": "43b853d2bd953ae09091f77824139e61df979cb8b540625b2b1155ad0d57b5ab"
+    },
+    {
+      "path": "reports/functional-20261104T104300532556Z.txt",
+      "sha256": "6d2d51bb15c8ce3019def912e7009de1eadfbeaa36aa7acf9366746abc0bdcd1"
+    },
+    {
+      "path": "reports/guarded-planning-browser-check.json",
+      "sha256": "63e9426be3977690eb50163a0848e2f5b236004fa56f54c2ee98340ad2999fad"
+    },
+    {
+      "path": "reports/guarded-planning-browser-final.json",
+      "sha256": "86f306dd52627795068f3bb316bd38b26b42be271a9ce56e0b1d841f6d3211c6"
+    },
+    {
+      "path": "reports/load-20261104T035926232657Z.json",
+      "sha256": "382aea55cf0cb9cc477845d8ae9cbf003e8645be06a9cf4b8cbdd5936800b0e1"
+    },
+    {
+      "path": "reports/planning-browser-check.json",
+      "sha256": "d93a84af1e1699860a696096a88ac3bbfd30005eb8510fd5cc6c919e433cda1a"
+    },
+    {
+      "path": "reports/policy-frontier-20261104T104314462625Z.json",
+      "sha256": "d47b6a70114ab9a26b45358a4375994e9244ebb2b43f4d3f47e862fe2995b27c"
+    },
+    {
+      "path": "reports/reproduction-20261104T040217946697Z.json",
+      "sha256": "ebe3b5cf8bf9e455a110676360d3e1dd2f489f7841cd7b5c4aa5d5e80c5cef79"
+    },
+    {
+      "path": "reports/room-planning-20261104T085357431248Z.json",
+      "sha256": "86fc2a72a5a45eae0fa499c44af53f32d1c94699b290cd1d89fa782249b705de"
+    }
+  ],
+  "original_files_unchanged": true
+}

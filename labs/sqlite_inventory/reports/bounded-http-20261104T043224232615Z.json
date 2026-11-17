@@ -1,0 +1,1231 @@
+{
+  "synthetic": true,
+  "utc": "20261104T043224232615Z",
+  "kind": "bounded_local_HTTP_staged_experiment",
+  "environment": {
+    "python": "3.10.4 (tags/v3.10.4:9d38120, Mar 23 2022, 23:13:41) [MSC v.1929 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26100-SP0",
+    "sqlite": "3.37.2",
+    "fixed_connection_workers": 8,
+    "waiting_queue_limit": 16,
+    "queue_timeout_seconds": 0.5,
+    "read_deadline_seconds": 3,
+    "response_write_timeout_seconds": 0.25,
+    "load_generator_same_machine": true
+  },
+  "stages": [
+    {
+      "logical_requests": 160,
+      "http_attempts": 160,
+      "attempt_status_counts": {
+        "201": 160
+      },
+      "attempt_error_counts": {},
+      "terminal_status_counts": {
+        "201": 160
+      },
+      "attempt_latency_ms": {
+        "samples": 160,
+        "p50": 8.443,
+        "p95": 28.894,
+        "p99": 33.799,
+        "max": 34.316
+      },
+      "logical_latency_ms": {
+        "samples": 160,
+        "p50": 8.45,
+        "p95": 28.906,
+        "p99": 33.806,
+        "max": 34.324
+      },
+      "retry_attempts": 0,
+      "name": "trial-1-clients-1",
+      "clients": 1,
+      "trial": 1,
+      "stock_capacity": 170,
+      "workload": "unique valid bookings; sufficient inventory; no retries",
+      "wall_seconds": 1.7752,
+      "acknowledged_new_orders": 160,
+      "http_business_success_fraction": 1.0,
+      "committed_orders": 160,
+      "unacknowledged_commits": 0,
+      "successful_response_latency_ms": {
+        "samples": 160,
+        "p50": 8.443,
+        "p95": 28.894,
+        "p99": 33.799,
+        "max": 34.316
+      },
+      "overload_response_latency_ms": {
+        "samples": 0,
+        "p50": null,
+        "p95": null,
+        "p99": null,
+        "max": null
+      },
+      "server_stats": {
+        "accepted": 161,
+        "active": 0,
+        "pending": 0,
+        "live": 0,
+        "peak_active": 1,
+        "peak_pending": 1,
+        "peak_live": 1,
+        "queue_full": 0,
+        "queue_expired": 0,
+        "shutdown_rejections": 0,
+        "read_timeouts": 0,
+        "response_write_errors": 0,
+        "handler_errors": 0,
+        "finished_connections": 161,
+        "reject_drain_deadlines": 0,
+        "reject_peer_resets": 0,
+        "reject_drain_byte_limits": 0,
+        "worker_limit": 8,
+        "queue_limit": 16,
+        "worker_threads_alive": 8
+      },
+      "resource_bounds_observed": true,
+      "audit": {
+        "ok": true,
+        "inventory_violations": [],
+        "booking_violations": [],
+        "event_violations": [],
+        "foreign_key_violations": [],
+        "integrity": [
+          "ok"
+        ]
+      },
+      "recovery_health_status": 200,
+      "recovery_http_attempts": 1,
+      "request_log": "trial-1-clients-1.ndjson",
+      "assertions_passed": true,
+      "errors": [],
+      "workers_alive_after_close": 0
+    },
+    {
+      "logical_requests": 160,
+      "http_attempts": 160,
+      "attempt_status_counts": {
+        "201": 160
+      },
+      "attempt_error_counts": {},
+      "terminal_status_counts": {
+        "201": 160
+      },
+      "attempt_latency_ms": {
+        "samples": 160,
+        "p50": 15.1,
+        "p95": 208.609,
+        "p99": 562.053,
+        "max": 660.449
+      },
+      "logical_latency_ms": {
+        "samples": 160,
+        "p50": 15.106,
+        "p95": 208.616,
+        "p99": 562.061,
+        "max": 660.457
+      },
+      "retry_attempts": 0,
+      "name": "trial-1-clients-8",
+      "clients": 8,
+      "trial": 1,
+      "stock_capacity": 170,
+      "workload": "unique valid bookings; sufficient inventory; no retries",
+      "wall_seconds": 1.1928,
+      "acknowledged_new_orders": 160,
+      "http_business_success_fraction": 1.0,
+      "committed_orders": 160,
+      "unacknowledged_commits": 0,
+      "successful_response_latency_ms": {
+        "samples": 160,
+        "p50": 15.1,
+        "p95": 208.609,
+        "p99": 562.053,
+        "max": 660.449
+      },
+      "overload_response_latency_ms": {
+        "samples": 0,
+        "p50": null,
+        "p95": null,
+        "p99": null,
+        "max": null
+      },
+      "server_stats": {
+        "accepted": 161,
+        "active": 0,
+        "pending": 0,
+        "live": 0,
+        "peak_active": 8,
+        "peak_pending": 2,
+        "peak_live": 8,
+        "queue_full": 0,
+        "queue_expired": 0,
+        "shutdown_rejections": 0,
+        "read_timeouts": 0,
+        "response_write_errors": 0,
+        "handler_errors": 0,
+        "finished_connections": 161,
+        "reject_drain_deadlines": 0,
+        "reject_peer_resets": 0,
+        "reject_drain_byte_limits": 0,
+        "worker_limit": 8,
+        "queue_limit": 16,
+        "worker_threads_alive": 8
+      },
+      "resource_bounds_observed": true,
+      "audit": {
+        "ok": true,
+        "inventory_violations": [],
+        "booking_violations": [],
+        "event_violations": [],
+        "foreign_key_violations": [],
+        "integrity": [
+          "ok"
+        ]
+      },
+      "recovery_health_status": 200,
+      "recovery_http_attempts": 1,
+      "request_log": "trial-1-clients-8.ndjson",
+      "assertions_passed": true,
+      "errors": [],
+      "workers_alive_after_close": 0
+    },
+    {
+      "logical_requests": 160,
+      "http_attempts": 160,
+      "attempt_status_counts": {
+        "201": 49,
+        "503": 111
+      },
+      "attempt_error_counts": {
+        "server_busy": 111
+      },
+      "terminal_status_counts": {
+        "201": 49,
+        "503": 111
+      },
+      "attempt_latency_ms": {
+        "samples": 160,
+        "p50": 8.906,
+        "p95": 182.48,
+        "p99": 340.858,
+        "max": 403.244
+      },
+      "logical_latency_ms": {
+        "samples": 160,
+        "p50": 8.911,
+        "p95": 182.488,
+        "p99": 340.866,
+        "max": 403.252
+      },
+      "retry_attempts": 0,
+      "name": "trial-1-clients-32",
+      "clients": 32,
+      "trial": 1,
+      "stock_capacity": 170,
+      "workload": "unique valid bookings; sufficient inventory; no retries",
+      "wall_seconds": 0.4252,
+      "acknowledged_new_orders": 49,
+      "http_business_success_fraction": 0.30625,
+      "committed_orders": 49,
+      "unacknowledged_commits": 0,
+      "successful_response_latency_ms": {
+        "samples": 49,
+        "p50": 125.346,
+        "p95": 280.538,
+        "p99": 403.244,
+        "max": 403.244
+      },
+      "overload_response_latency_ms": {
+        "samples": 111,
+        "p50": 7.688,
+        "p95": 17.311,
+        "p99": 22.699,
+        "max": 25.232
+      },
+      "server_stats": {
+        "accepted": 161,
+        "active": 0,
+        "pending": 0,
+        "live": 0,
+        "peak_active": 8,
+        "peak_pending": 16,
+        "peak_live": 25,
+        "queue_full": 111,
+        "queue_expired": 0,
+        "shutdown_rejections": 0,
+        "read_timeouts": 0,
+        "response_write_errors": 0,
+        "handler_errors": 0,
+        "finished_connections": 161,
+        "reject_drain_deadlines": 0,
+        "reject_peer_resets": 0,
+        "reject_drain_byte_limits": 0,
+        "worker_limit": 8,
+        "queue_limit": 16,
+        "worker_threads_alive": 8
+      },
+      "resource_bounds_observed": true,
+      "audit": {
+        "ok": true,
+        "inventory_violations": [],
+        "booking_violations": [],
+        "event_violations": [],
+        "foreign_key_violations": [],
+        "integrity": [
+          "ok"
+        ]
+      },
+      "recovery_health_status": 200,
+      "recovery_http_attempts": 1,
+      "request_log": "trial-1-clients-32.ndjson",
+      "assertions_passed": true,
+      "errors": [],
+      "workers_alive_after_close": 0
+    },
+    {
+      "logical_requests": 160,
+      "http_attempts": 160,
+      "attempt_status_counts": {
+        "201": 57,
+        "503": 103
+      },
+      "attempt_error_counts": {
+        "server_busy": 103
+      },
+      "terminal_status_counts": {
+        "201": 57,
+        "503": 103
+      },
+      "attempt_latency_ms": {
+        "samples": 160,
+        "p50": 20.265,
+        "p95": 579.055,
+        "p99": 655.874,
+        "max": 692.663
+      },
+      "logical_latency_ms": {
+        "samples": 160,
+        "p50": 20.27,
+        "p95": 579.065,
+        "p99": 655.881,
+        "max": 692.672
+      },
+      "retry_attempts": 0,
+      "name": "trial-1-clients-64",
+      "clients": 64,
+      "trial": 1,
+      "stock_capacity": 170,
+      "workload": "unique valid bookings; sufficient inventory; no retries",
+      "wall_seconds": 0.7443,
+      "acknowledged_new_orders": 57,
+      "http_business_success_fraction": 0.35625,
+      "committed_orders": 57,
+      "unacknowledged_commits": 0,
+      "successful_response_latency_ms": {
+        "samples": 57,
+        "p50": 158.99,
+        "p95": 635.727,
+        "p99": 692.663,
+        "max": 692.663
+      },
+      "overload_response_latency_ms": {
+        "samples": 103,
+        "p50": 19.143,
+        "p95": 32.353,
+        "p99": 36.665,
+        "max": 36.871
+      },
+      "server_stats": {
+        "accepted": 161,
+        "active": 0,
+        "pending": 0,
+        "live": 0,
+        "peak_active": 8,
+        "peak_pending": 16,
+        "peak_live": 25,
+        "queue_full": 103,
+        "queue_expired": 0,
+        "shutdown_rejections": 0,
+        "read_timeouts": 0,
+        "response_write_errors": 0,
+        "handler_errors": 0,
+        "finished_connections": 161,
+        "reject_drain_deadlines": 0,
+        "reject_peer_resets": 0,
+        "reject_drain_byte_limits": 0,
+        "worker_limit": 8,
+        "queue_limit": 16,
+        "worker_threads_alive": 8
+      },
+      "resource_bounds_observed": true,
+      "audit": {
+        "ok": true,
+        "inventory_violations": [],
+        "booking_violations": [],
+        "event_violations": [],
+        "foreign_key_violations": [],
+        "integrity": [
+          "ok"
+        ]
+      },
+      "recovery_health_status": 200,
+      "recovery_http_attempts": 1,
+      "request_log": "trial-1-clients-64.ndjson",
+      "assertions_passed": true,
+      "errors": [],
+      "workers_alive_after_close": 0
+    },
+    {
+      "logical_requests": 160,
+      "http_attempts": 160,
+      "attempt_status_counts": {
+        "201": 68,
+        "503": 92
+      },
+      "attempt_error_counts": {
+        "server_busy": 92
+      },
+      "terminal_status_counts": {
+        "201": 68,
+        "503": 92
+      },
+      "attempt_latency_ms": {
+        "samples": 160,
+        "p50": 106.313,
+        "p95": 617.948,
+        "p99": 732.605,
+        "max": 763.349
+      },
+      "logical_latency_ms": {
+        "samples": 160,
+        "p50": 106.32,
+        "p95": 617.956,
+        "p99": 732.615,
+        "max": 763.358
+      },
+      "retry_attempts": 0,
+      "name": "trial-1-clients-96",
+      "clients": 96,
+      "trial": 1,
+      "stock_capacity": 170,
+      "workload": "unique valid bookings; sufficient inventory; no retries",
+      "wall_seconds": 0.8403,
+      "acknowledged_new_orders": 68,
+      "http_business_success_fraction": 0.425,
+      "committed_orders": 68,
+      "unacknowledged_commits": 0,
+      "successful_response_latency_ms": {
+        "samples": 68,
+        "p50": 269.235,
+        "p95": 699.11,
+        "p99": 763.349,
+        "max": 763.349
+      },
+      "overload_response_latency_ms": {
+        "samples": 92,
+        "p50": 31.639,
+        "p95": 515.77,
+        "p99": 521.484,
+        "max": 521.484
+      },
+      "server_stats": {
+        "accepted": 161,
+        "active": 0,
+        "pending": 0,
+        "live": 0,
+        "peak_active": 8,
+        "peak_pending": 16,
+        "peak_live": 25,
+        "queue_full": 92,
+        "queue_expired": 0,
+        "shutdown_rejections": 0,
+        "read_timeouts": 0,
+        "response_write_errors": 0,
+        "handler_errors": 0,
+        "finished_connections": 161,
+        "reject_drain_deadlines": 0,
+        "reject_peer_resets": 0,
+        "reject_drain_byte_limits": 0,
+        "worker_limit": 8,
+        "queue_limit": 16,
+        "worker_threads_alive": 8
+      },
+      "resource_bounds_observed": true,
+      "audit": {
+        "ok": true,
+        "inventory_violations": [],
+        "booking_violations": [],
+        "event_violations": [],
+        "foreign_key_violations": [],
+        "integrity": [
+          "ok"
+        ]
+      },
+      "recovery_health_status": 200,
+      "recovery_http_attempts": 1,
+      "request_log": "trial-1-clients-96.ndjson",
+      "assertions_passed": true,
+      "errors": [],
+      "workers_alive_after_close": 0
+    },
+    {
+      "logical_requests": 160,
+      "http_attempts": 160,
+      "attempt_status_counts": {
+        "201": 160
+      },
+      "attempt_error_counts": {},
+      "terminal_status_counts": {
+        "201": 160
+      },
+      "attempt_latency_ms": {
+        "samples": 160,
+        "p50": 10.132,
+        "p95": 29.893,
+        "p99": 33.065,
+        "max": 33.43
+      },
+      "logical_latency_ms": {
+        "samples": 160,
+        "p50": 10.138,
+        "p95": 29.9,
+        "p99": 33.072,
+        "max": 33.438
+      },
+      "retry_attempts": 0,
+      "name": "trial-2-clients-1",
+      "clients": 1,
+      "trial": 2,
+      "stock_capacity": 170,
+      "workload": "unique valid bookings; sufficient inventory; no retries",
+      "wall_seconds": 2.0722,
+      "acknowledged_new_orders": 160,
+      "http_business_success_fraction": 1.0,
+      "committed_orders": 160,
+      "unacknowledged_commits": 0,
+      "successful_response_latency_ms": {
+        "samples": 160,
+        "p50": 10.132,
+        "p95": 29.893,
+        "p99": 33.065,
+        "max": 33.43
+      },
+      "overload_response_latency_ms": {
+        "samples": 0,
+        "p50": null,
+        "p95": null,
+        "p99": null,
+        "max": null
+      },
+      "server_stats": {
+        "accepted": 161,
+        "active": 0,
+        "pending": 0,
+        "live": 0,
+        "peak_active": 1,
+        "peak_pending": 1,
+        "peak_live": 1,
+        "queue_full": 0,
+        "queue_expired": 0,
+        "shutdown_rejections": 0,
+        "read_timeouts": 0,
+        "response_write_errors": 0,
+        "handler_errors": 0,
+        "finished_connections": 161,
+        "reject_drain_deadlines": 0,
+        "reject_peer_resets": 0,
+        "reject_drain_byte_limits": 0,
+        "worker_limit": 8,
+        "queue_limit": 16,
+        "worker_threads_alive": 8
+      },
+      "resource_bounds_observed": true,
+      "audit": {
+        "ok": true,
+        "inventory_violations": [],
+        "booking_violations": [],
+        "event_violations": [],
+        "foreign_key_violations": [],
+        "integrity": [
+          "ok"
+        ]
+      },
+      "recovery_health_status": 200,
+      "recovery_http_attempts": 1,
+      "request_log": "trial-2-clients-1.ndjson",
+      "assertions_passed": true,
+      "errors": [],
+      "workers_alive_after_close": 0
+    },
+    {
+      "logical_requests": 160,
+      "http_attempts": 160,
+      "attempt_status_counts": {
+        "201": 160
+      },
+      "attempt_error_counts": {},
+      "terminal_status_counts": {
+        "201": 160
+      },
+      "attempt_latency_ms": {
+        "samples": 160,
+        "p50": 18.258,
+        "p95": 180.242,
+        "p99": 355.207,
+        "max": 560.384
+      },
+      "logical_latency_ms": {
+        "samples": 160,
+        "p50": 18.266,
+        "p95": 180.252,
+        "p99": 355.215,
+        "max": 560.392
+      },
+      "retry_attempts": 0,
+      "name": "trial-2-clients-8",
+      "clients": 8,
+      "trial": 2,
+      "stock_capacity": 170,
+      "workload": "unique valid bookings; sufficient inventory; no retries",
+      "wall_seconds": 1.0505,
+      "acknowledged_new_orders": 160,
+      "http_business_success_fraction": 1.0,
+      "committed_orders": 160,
+      "unacknowledged_commits": 0,
+      "successful_response_latency_ms": {
+        "samples": 160,
+        "p50": 18.258,
+        "p95": 180.242,
+        "p99": 355.207,
+        "max": 560.384
+      },
+      "overload_response_latency_ms": {
+        "samples": 0,
+        "p50": null,
+        "p95": null,
+        "p99": null,
+        "max": null
+      },
+      "server_stats": {
+        "accepted": 161,
+        "active": 0,
+        "pending": 0,
+        "live": 0,
+        "peak_active": 8,
+        "peak_pending": 2,
+        "peak_live": 8,
+        "queue_full": 0,
+        "queue_expired": 0,
+        "shutdown_rejections": 0,
+        "read_timeouts": 0,
+        "response_write_errors": 0,
+        "handler_errors": 0,
+        "finished_connections": 161,
+        "reject_drain_deadlines": 0,
+        "reject_peer_resets": 0,
+        "reject_drain_byte_limits": 0,
+        "worker_limit": 8,
+        "queue_limit": 16,
+        "worker_threads_alive": 8
+      },
+      "resource_bounds_observed": true,
+      "audit": {
+        "ok": true,
+        "inventory_violations": [],
+        "booking_violations": [],
+        "event_violations": [],
+        "foreign_key_violations": [],
+        "integrity": [
+          "ok"
+        ]
+      },
+      "recovery_health_status": 200,
+      "recovery_http_attempts": 1,
+      "request_log": "trial-2-clients-8.ndjson",
+      "assertions_passed": true,
+      "errors": [],
+      "workers_alive_after_close": 0
+    },
+    {
+      "logical_requests": 160,
+      "http_attempts": 160,
+      "attempt_status_counts": {
+        "201": 50,
+        "503": 110
+      },
+      "attempt_error_counts": {
+        "server_busy": 110
+      },
+      "terminal_status_counts": {
+        "201": 50,
+        "503": 110
+      },
+      "attempt_latency_ms": {
+        "samples": 160,
+        "p50": 14.072,
+        "p95": 169.252,
+        "p99": 283.165,
+        "max": 453.302
+      },
+      "logical_latency_ms": {
+        "samples": 160,
+        "p50": 14.077,
+        "p95": 169.259,
+        "p99": 283.172,
+        "max": 453.311
+      },
+      "retry_attempts": 0,
+      "name": "trial-2-clients-32",
+      "clients": 32,
+      "trial": 2,
+      "stock_capacity": 170,
+      "workload": "unique valid bookings; sufficient inventory; no retries",
+      "wall_seconds": 0.4564,
+      "acknowledged_new_orders": 50,
+      "http_business_success_fraction": 0.3125,
+      "committed_orders": 50,
+      "unacknowledged_commits": 0,
+      "successful_response_latency_ms": {
+        "samples": 50,
+        "p50": 132.041,
+        "p95": 271.52,
+        "p99": 453.302,
+        "max": 453.302
+      },
+      "overload_response_latency_ms": {
+        "samples": 110,
+        "p50": 8.155,
+        "p95": 21.945,
+        "p99": 23.243,
+        "max": 25.14
+      },
+      "server_stats": {
+        "accepted": 161,
+        "active": 0,
+        "pending": 0,
+        "live": 0,
+        "peak_active": 8,
+        "peak_pending": 16,
+        "peak_live": 25,
+        "queue_full": 110,
+        "queue_expired": 0,
+        "shutdown_rejections": 0,
+        "read_timeouts": 0,
+        "response_write_errors": 0,
+        "handler_errors": 0,
+        "finished_connections": 161,
+        "reject_drain_deadlines": 0,
+        "reject_peer_resets": 0,
+        "reject_drain_byte_limits": 0,
+        "worker_limit": 8,
+        "queue_limit": 16,
+        "worker_threads_alive": 8
+      },
+      "resource_bounds_observed": true,
+      "audit": {
+        "ok": true,
+        "inventory_violations": [],
+        "booking_violations": [],
+        "event_violations": [],
+        "foreign_key_violations": [],
+        "integrity": [
+          "ok"
+        ]
+      },
+      "recovery_health_status": 200,
+      "recovery_http_attempts": 1,
+      "request_log": "trial-2-clients-32.ndjson",
+      "assertions_passed": true,
+      "errors": [],
+      "workers_alive_after_close": 0
+    },
+    {
+      "logical_requests": 160,
+      "http_attempts": 160,
+      "attempt_status_counts": {
+        "201": 57,
+        "503": 103
+      },
+      "attempt_error_counts": {
+        "server_busy": 103
+      },
+      "terminal_status_counts": {
+        "201": 57,
+        "503": 103
+      },
+      "attempt_latency_ms": {
+        "samples": 160,
+        "p50": 23.581,
+        "p95": 578.521,
+        "p99": 682.749,
+        "max": 726.086
+      },
+      "logical_latency_ms": {
+        "samples": 160,
+        "p50": 23.586,
+        "p95": 578.529,
+        "p99": 682.756,
+        "max": 726.094
+      },
+      "retry_attempts": 0,
+      "name": "trial-2-clients-64",
+      "clients": 64,
+      "trial": 2,
+      "stock_capacity": 170,
+      "workload": "unique valid bookings; sufficient inventory; no retries",
+      "wall_seconds": 0.7757,
+      "acknowledged_new_orders": 57,
+      "http_business_success_fraction": 0.35625,
+      "committed_orders": 57,
+      "unacknowledged_commits": 0,
+      "successful_response_latency_ms": {
+        "samples": 57,
+        "p50": 166.397,
+        "p95": 655.946,
+        "p99": 726.086,
+        "max": 726.086
+      },
+      "overload_response_latency_ms": {
+        "samples": 103,
+        "p50": 20.138,
+        "p95": 31.095,
+        "p99": 31.841,
+        "max": 32.794
+      },
+      "server_stats": {
+        "accepted": 161,
+        "active": 0,
+        "pending": 0,
+        "live": 0,
+        "peak_active": 8,
+        "peak_pending": 16,
+        "peak_live": 25,
+        "queue_full": 103,
+        "queue_expired": 0,
+        "shutdown_rejections": 0,
+        "read_timeouts": 0,
+        "response_write_errors": 0,
+        "handler_errors": 0,
+        "finished_connections": 161,
+        "reject_drain_deadlines": 0,
+        "reject_peer_resets": 0,
+        "reject_drain_byte_limits": 0,
+        "worker_limit": 8,
+        "queue_limit": 16,
+        "worker_threads_alive": 8
+      },
+      "resource_bounds_observed": true,
+      "audit": {
+        "ok": true,
+        "inventory_violations": [],
+        "booking_violations": [],
+        "event_violations": [],
+        "foreign_key_violations": [],
+        "integrity": [
+          "ok"
+        ]
+      },
+      "recovery_health_status": 200,
+      "recovery_http_attempts": 1,
+      "request_log": "trial-2-clients-64.ndjson",
+      "assertions_passed": true,
+      "errors": [],
+      "workers_alive_after_close": 0
+    },
+    {
+      "logical_requests": 160,
+      "http_attempts": 160,
+      "attempt_status_counts": {
+        "201": 64,
+        "503": 96
+      },
+      "attempt_error_counts": {
+        "server_busy": 96
+      },
+      "terminal_status_counts": {
+        "201": 64,
+        "503": 96
+      },
+      "attempt_latency_ms": {
+        "samples": 160,
+        "p50": 103.289,
+        "p95": 622.48,
+        "p99": 722.259,
+        "max": 788.279
+      },
+      "logical_latency_ms": {
+        "samples": 160,
+        "p50": 103.297,
+        "p95": 622.488,
+        "p99": 722.267,
+        "max": 788.288
+      },
+      "retry_attempts": 0,
+      "name": "trial-2-clients-96",
+      "clients": 96,
+      "trial": 2,
+      "stock_capacity": 170,
+      "workload": "unique valid bookings; sufficient inventory; no retries",
+      "wall_seconds": 0.8394,
+      "acknowledged_new_orders": 64,
+      "http_business_success_fraction": 0.4,
+      "committed_orders": 64,
+      "unacknowledged_commits": 0,
+      "successful_response_latency_ms": {
+        "samples": 64,
+        "p50": 296.761,
+        "p95": 674.599,
+        "p99": 788.279,
+        "max": 788.279
+      },
+      "overload_response_latency_ms": {
+        "samples": 96,
+        "p50": 25.544,
+        "p95": 518.225,
+        "p99": 526.515,
+        "max": 526.515
+      },
+      "server_stats": {
+        "accepted": 161,
+        "active": 0,
+        "pending": 0,
+        "live": 0,
+        "peak_active": 8,
+        "peak_pending": 16,
+        "peak_live": 25,
+        "queue_full": 96,
+        "queue_expired": 0,
+        "shutdown_rejections": 0,
+        "read_timeouts": 0,
+        "response_write_errors": 0,
+        "handler_errors": 0,
+        "finished_connections": 161,
+        "reject_drain_deadlines": 0,
+        "reject_peer_resets": 0,
+        "reject_drain_byte_limits": 0,
+        "worker_limit": 8,
+        "queue_limit": 16,
+        "worker_threads_alive": 8
+      },
+      "resource_bounds_observed": true,
+      "audit": {
+        "ok": true,
+        "inventory_violations": [],
+        "booking_violations": [],
+        "event_violations": [],
+        "foreign_key_violations": [],
+        "integrity": [
+          "ok"
+        ]
+      },
+      "recovery_health_status": 200,
+      "recovery_http_attempts": 1,
+      "request_log": "trial-2-clients-96.ndjson",
+      "assertions_passed": true,
+      "errors": [],
+      "workers_alive_after_close": 0
+    }
+  ],
+  "pure_http_lifecycle": {
+    "passed": true,
+    "failure": null,
+    "phases": [
+      {
+        "name": "reserve_to_capacity",
+        "logical_requests": 80,
+        "http_attempts": 80,
+        "attempt_status_counts": {
+          "201": 20,
+          "409": 60
+        },
+        "attempt_error_counts": {
+          "sold_out": 60
+        },
+        "terminal_status_counts": {
+          "201": 20,
+          "409": 60
+        },
+        "attempt_latency_ms": {
+          "samples": 80,
+          "p50": 3.9,
+          "p95": 152.051,
+          "p99": 446.776,
+          "max": 446.776
+        },
+        "logical_latency_ms": {
+          "samples": 80,
+          "p50": 3.903,
+          "p95": 152.055,
+          "p99": 446.782,
+          "max": 446.782
+        },
+        "retry_attempts": 0,
+        "audit": {
+          "ok": true,
+          "inventory_violations": [],
+          "booking_violations": [],
+          "event_violations": [],
+          "foreign_key_violations": [],
+          "integrity": [
+            "ok"
+          ]
+        }
+      },
+      {
+        "name": "duplicate_cancels_over_HTTP",
+        "logical_requests": 40,
+        "http_attempts": 40,
+        "attempt_status_counts": {
+          "200": 40
+        },
+        "attempt_error_counts": {},
+        "terminal_status_counts": {
+          "200": 40
+        },
+        "attempt_latency_ms": {
+          "samples": 40,
+          "p50": 13.448,
+          "p95": 219.667,
+          "p99": 332.096,
+          "max": 332.096
+        },
+        "logical_latency_ms": {
+          "samples": 40,
+          "p50": 13.455,
+          "p95": 219.674,
+          "p99": 332.102,
+          "max": 332.102
+        },
+        "retry_attempts": 0,
+        "audit": {
+          "ok": true,
+          "inventory_violations": [],
+          "booking_violations": [],
+          "event_violations": [],
+          "foreign_key_violations": [],
+          "integrity": [
+            "ok"
+          ]
+        }
+      },
+      {
+        "name": "verify_every_cancel_over_HTTP",
+        "logical_requests": 10,
+        "http_attempts": 10,
+        "attempt_status_counts": {
+          "200": 10
+        },
+        "attempt_error_counts": {},
+        "terminal_status_counts": {
+          "200": 10
+        },
+        "attempt_latency_ms": {
+          "samples": 10,
+          "p50": 8.495,
+          "p95": 14.714,
+          "p99": 14.714,
+          "max": 14.714
+        },
+        "logical_latency_ms": {
+          "samples": 10,
+          "p50": 8.501,
+          "p95": 14.721,
+          "p99": 14.721,
+          "max": 14.721
+        },
+        "retry_attempts": 0,
+        "audit": {
+          "ok": true,
+          "inventory_violations": [],
+          "booking_violations": [],
+          "event_violations": [],
+          "foreign_key_violations": [],
+          "integrity": [
+            "ok"
+          ]
+        }
+      },
+      {
+        "name": "check_released_inventory_over_HTTP",
+        "logical_requests": 1,
+        "http_attempts": 1,
+        "attempt_status_counts": {
+          "200": 1
+        },
+        "attempt_error_counts": {},
+        "terminal_status_counts": {
+          "200": 1
+        },
+        "attempt_latency_ms": {
+          "samples": 1,
+          "p50": 3.814,
+          "p95": 3.814,
+          "p99": 3.814,
+          "max": 3.814
+        },
+        "logical_latency_ms": {
+          "samples": 1,
+          "p50": 3.822,
+          "p95": 3.822,
+          "p99": 3.822,
+          "max": 3.822
+        },
+        "retry_attempts": 0,
+        "audit": {
+          "ok": true,
+          "inventory_violations": [],
+          "booking_violations": [],
+          "event_violations": [],
+          "foreign_key_violations": [],
+          "integrity": [
+            "ok"
+          ]
+        }
+      },
+      {
+        "name": "refill_over_HTTP",
+        "logical_requests": 50,
+        "http_attempts": 50,
+        "attempt_status_counts": {
+          "201": 10,
+          "409": 40
+        },
+        "attempt_error_counts": {
+          "sold_out": 40
+        },
+        "terminal_status_counts": {
+          "201": 10,
+          "409": 40
+        },
+        "attempt_latency_ms": {
+          "samples": 50,
+          "p50": 3.782,
+          "p95": 150.114,
+          "p99": 167.079,
+          "max": 167.079
+        },
+        "logical_latency_ms": {
+          "samples": 50,
+          "p50": 3.786,
+          "p95": 150.118,
+          "p99": 167.085,
+          "max": 167.085
+        },
+        "retry_attempts": 0,
+        "audit": {
+          "ok": true,
+          "inventory_violations": [],
+          "booking_violations": [],
+          "event_violations": [],
+          "foreign_key_violations": [],
+          "integrity": [
+            "ok"
+          ]
+        }
+      },
+      {
+        "name": "check_sold_out_inventory_over_HTTP",
+        "logical_requests": 1,
+        "http_attempts": 1,
+        "attempt_status_counts": {
+          "200": 1
+        },
+        "attempt_error_counts": {},
+        "terminal_status_counts": {
+          "200": 1
+        },
+        "attempt_latency_ms": {
+          "samples": 1,
+          "p50": 23.305,
+          "p95": 23.305,
+          "p99": 23.305,
+          "max": 23.305
+        },
+        "logical_latency_ms": {
+          "samples": 1,
+          "p50": 23.315,
+          "p95": 23.315,
+          "p99": 23.315,
+          "max": 23.315
+        },
+        "retry_attempts": 0,
+        "audit": {
+          "ok": true,
+          "inventory_violations": [],
+          "booking_violations": [],
+          "event_violations": [],
+          "foreign_key_violations": [],
+          "integrity": [
+            "ok"
+          ]
+        }
+      }
+    ],
+    "distinct_cancelled_orders_confirmed_by_HTTP": 10,
+    "direct_service_mutation_calls_after_fixture_seed": 0,
+    "http_attempts": 182,
+    "logical_requests": 182,
+    "retry_policy": "Up to four attempts; honor Retry-After; preserve payload/key; retry explicit no-commit 503 or uncertain transport.",
+    "audit": {
+      "ok": true,
+      "inventory_violations": [],
+      "booking_violations": [],
+      "event_violations": [],
+      "foreign_key_violations": [],
+      "integrity": [
+        "ok"
+      ]
+    },
+    "server_stats_after_close": {
+      "accepted": 182,
+      "active": 0,
+      "pending": 0,
+      "live": 0,
+      "peak_active": 8,
+      "peak_pending": 2,
+      "peak_live": 8,
+      "queue_full": 0,
+      "queue_expired": 0,
+      "shutdown_rejections": 0,
+      "read_timeouts": 0,
+      "response_write_errors": 0,
+      "handler_errors": 0,
+      "finished_connections": 182,
+      "reject_drain_deadlines": 0,
+      "reject_peer_resets": 0,
+      "reject_drain_byte_limits": 0,
+      "worker_limit": 8,
+      "queue_limit": 16,
+      "worker_threads_alive": 0
+    },
+    "request_log": "pure-http-lifecycle.ndjson"
+  },
+  "run_error": null,
+  "correctness_assertions_passed": true,
+  "performance_SLO_defined": false,
+  "production_capacity_claim": false,
+  "source_sha256": {
+    "hotel/api.py": "86af045a5e444b8f7ce4fcbb8588c6fe7a48c9b74e678703d99f3081f996006f",
+    "hotel/service.py": "3399ebe58aefc3efaaffb9679b74f22cbb5d0129835714529dca97cbcba585e6",
+    "hotel/schema.sql": "d99dfa098e26b57048b3474fb0735faf967567504d39ca2aad9fb9c09638f247",
+    "scripts/http_client.py": "0bd7ef9e6cd90165808278c3ab7b8e1c3df4be8e005e931f5cf4937aa59d69f4",
+    "scripts/load_matrix.py": "8d6c6a08480b902b9507d379508823562d0a6c9b19faaa9e8819a6601dad74f7",
+    "tests/test_booking.py": "ce5a30a522da63e701f3925eb718dba16750c6bbf511cd49b0900e025a448902",
+    "tests/test_bounded_http.py": "2f25245de69856c75cf10883401dee77a3af6d9677add6788addcfeae1c32f2e"
+  },
+  "request_logs_directory": "E:\\Projects\\hotel-reservation-lab\\.runtime\\bounded-http-20261104T043224232615Z",
+  "observed_http_attempts": 1792,
+  "boundaries": [
+    "Local loopback SQLite only; no PostgreSQL or production validation.",
+    "Ample-stock trials do not retry, so overload is visible in success fractions.",
+    "Success fraction is acknowledged new bookings divided by offered logical requests.",
+    "Each trial uses fresh synthetic stock; no cancellation cleanup via service methods.",
+    "Retrying lifecycle reports both logical requests and physical HTTP attempts.",
+    "Bounded threads/accepted queue do not protect the OS from every form of network overload.",
+    "Queue expiry eligibility is polled; write/OS scheduling may delay delivery of its response.",
+    "No arrival-rate-controlled workload or capacity/SLA conclusion; trials are a local sample."
+  ]
+}

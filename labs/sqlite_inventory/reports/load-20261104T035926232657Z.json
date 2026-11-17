@@ -1,0 +1,375 @@
+{
+  "synthetic": true,
+  "kind": "local_loopback_HTTP_load_sample",
+  "utc": "20261104T035926232657Z",
+  "environment": {
+    "python": "3.10.4 (tags/v3.10.4:9d38120, Mar 23 2022, 23:13:41) [MSC v.1929 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26100-SP0",
+    "sqlite": "3.37.2",
+    "clients": 64,
+    "application_active_slots": 32,
+    "server_processes": 1,
+    "journal_mode": "WAL",
+    "synchronous": "FULL",
+    "writer_timeout_seconds": 5,
+    "db": "E:\\Projects\\hotel-reservation-lab\\.runtime\\load-20261104T035926232657Z\\hotel.db",
+    "load_generator_same_machine": true
+  },
+  "passed": true,
+  "failure": null,
+  "scenarios": [
+    {
+      "name": "same_type_three_nights",
+      "requests": 600,
+      "wall_seconds": 1.8089,
+      "completed_rps": 331.7,
+      "http_status_counts": {
+        "409": 53,
+        "201": 40,
+        "503": 507
+      },
+      "error_counts": {
+        "sold_out": 53,
+        "server_busy": 507
+      },
+      "latency_ms": {
+        "p50": 48.178,
+        "p95": 514.02,
+        "p99": 1244.027,
+        "max": 1770.216
+      },
+      "audit": {
+        "ok": true,
+        "inventory_violations": [],
+        "booking_violations": [],
+        "event_violations": [],
+        "foreign_key_violations": [],
+        "integrity": [
+          "ok"
+        ]
+      },
+      "unexpected_responses": []
+    },
+    {
+      "name": "same_key_retries",
+      "requests": 200,
+      "wall_seconds": 1.1238,
+      "completed_rps": 177.97,
+      "http_status_counts": {
+        "200": 105,
+        "503": 95
+      },
+      "error_counts": {
+        "server_busy": 95
+      },
+      "latency_ms": {
+        "p50": 52.134,
+        "p95": 595.259,
+        "p99": 842.98,
+        "max": 1063.414
+      },
+      "audit": {
+        "ok": true,
+        "inventory_violations": [],
+        "booking_violations": [],
+        "event_violations": [],
+        "foreign_key_violations": [],
+        "integrity": [
+          "ok"
+        ]
+      },
+      "unexpected_responses": []
+    },
+    {
+      "name": "same_key_changed_payload",
+      "requests": 50,
+      "wall_seconds": 0.6096,
+      "completed_rps": 82.01,
+      "http_status_counts": {
+        "409": 50
+      },
+      "error_counts": {
+        "idempotency_conflict": 50
+      },
+      "latency_ms": {
+        "p50": 36.31,
+        "p95": 446.49,
+        "p99": 578.612,
+        "max": 578.612
+      },
+      "audit": {
+        "ok": true,
+        "inventory_violations": [],
+        "booking_violations": [],
+        "event_violations": [],
+        "foreign_key_violations": [],
+        "integrity": [
+          "ok"
+        ]
+      },
+      "unexpected_responses": []
+    },
+    {
+      "name": "quantity_over_limit",
+      "requests": 60,
+      "wall_seconds": 0.0809,
+      "completed_rps": 741.36,
+      "http_status_counts": {
+        "400": 60
+      },
+      "error_counts": {
+        "invalid_quantity": 60
+      },
+      "latency_ms": {
+        "p50": 30.288,
+        "p95": 34.194,
+        "p99": 34.821,
+        "max": 34.821
+      },
+      "audit": {
+        "ok": true,
+        "inventory_violations": [],
+        "booking_violations": [],
+        "event_violations": [],
+        "foreign_key_violations": [],
+        "integrity": [
+          "ok"
+        ]
+      },
+      "unexpected_responses": []
+    },
+    {
+      "name": "mixed_batch_1",
+      "requests": 160,
+      "wall_seconds": 1.1078,
+      "completed_rps": 144.43,
+      "http_status_counts": {
+        "201": 21,
+        "409": 24,
+        "503": 115
+      },
+      "error_counts": {
+        "sold_out": 24,
+        "server_busy": 115
+      },
+      "latency_ms": {
+        "p50": 39.054,
+        "p95": 652.029,
+        "p99": 977.283,
+        "max": 1103.605
+      },
+      "audit": {
+        "ok": true,
+        "inventory_violations": [],
+        "booking_violations": [],
+        "event_violations": [],
+        "foreign_key_violations": [],
+        "integrity": [
+          "ok"
+        ]
+      },
+      "unexpected_responses": []
+    },
+    {
+      "name": "mixed_batch_2",
+      "requests": 160,
+      "wall_seconds": 1.1287,
+      "completed_rps": 141.76,
+      "http_status_counts": {
+        "409": 64,
+        "503": 96
+      },
+      "error_counts": {
+        "sold_out": 64,
+        "server_busy": 96
+      },
+      "latency_ms": {
+        "p50": 41.472,
+        "p95": 674.87,
+        "p99": 995.858,
+        "max": 1108.994
+      },
+      "audit": {
+        "ok": true,
+        "inventory_violations": [],
+        "booking_violations": [],
+        "event_violations": [],
+        "foreign_key_violations": [],
+        "integrity": [
+          "ok"
+        ]
+      },
+      "unexpected_responses": []
+    },
+    {
+      "name": "mixed_batch_3",
+      "requests": 160,
+      "wall_seconds": 0.8793,
+      "completed_rps": 181.97,
+      "http_status_counts": {
+        "409": 61,
+        "503": 99
+      },
+      "error_counts": {
+        "sold_out": 61,
+        "server_busy": 99
+      },
+      "latency_ms": {
+        "p50": 41.924,
+        "p95": 553.678,
+        "p99": 795.575,
+        "max": 870.908
+      },
+      "audit": {
+        "ok": true,
+        "inventory_violations": [],
+        "booking_violations": [],
+        "event_violations": [],
+        "foreign_key_violations": [],
+        "integrity": [
+          "ok"
+        ]
+      },
+      "unexpected_responses": []
+    },
+    {
+      "name": "mixed_batch_4",
+      "requests": 160,
+      "wall_seconds": 0.9074,
+      "completed_rps": 176.32,
+      "http_status_counts": {
+        "409": 65,
+        "503": 95
+      },
+      "error_counts": {
+        "sold_out": 65,
+        "server_busy": 95
+      },
+      "latency_ms": {
+        "p50": 47.5,
+        "p95": 567.45,
+        "p99": 815.263,
+        "max": 893.361
+      },
+      "audit": {
+        "ok": true,
+        "inventory_violations": [],
+        "booking_violations": [],
+        "event_violations": [],
+        "foreign_key_violations": [],
+        "integrity": [
+          "ok"
+        ]
+      },
+      "unexpected_responses": []
+    },
+    {
+      "name": "concurrent_duplicate_cancellation",
+      "requests": 100,
+      "wall_seconds": 1.2521,
+      "completed_rps": 79.86,
+      "http_status_counts": {
+        "200": 41,
+        "503": 59
+      },
+      "error_counts": {
+        "server_busy": 59
+      },
+      "latency_ms": {
+        "p50": 46.465,
+        "p95": 786.453,
+        "p99": 1116.774,
+        "max": 1234.28
+      },
+      "audit": {
+        "ok": true,
+        "inventory_violations": [],
+        "booking_violations": [],
+        "event_violations": [],
+        "foreign_key_violations": [],
+        "integrity": [
+          "ok"
+        ]
+      },
+      "unexpected_responses": []
+    },
+    {
+      "name": "after_cancellation_refill",
+      "requests": 200,
+      "wall_seconds": 2.2215,
+      "completed_rps": 90.03,
+      "http_status_counts": {
+        "201": 20,
+        "409": 30,
+        "503": 150
+      },
+      "error_counts": {
+        "sold_out": 30,
+        "server_busy": 150
+      },
+      "latency_ms": {
+        "p50": 42.598,
+        "p95": 1118.394,
+        "p99": 1969.544,
+        "max": 2216.91
+      },
+      "audit": {
+        "ok": true,
+        "inventory_violations": [],
+        "booking_violations": [],
+        "event_violations": [],
+        "foreign_key_violations": [],
+        "integrity": [
+          "ok"
+        ]
+      },
+      "unexpected_responses": []
+    },
+    {
+      "name": "availability_browse",
+      "requests": 600,
+      "wall_seconds": 1.14,
+      "completed_rps": 526.33,
+      "http_status_counts": {
+        "200": 600
+      },
+      "error_counts": {},
+      "latency_ms": {
+        "p50": 114.926,
+        "p95": 136.958,
+        "p99": 142.155,
+        "max": 146.717
+      },
+      "audit": {
+        "ok": true,
+        "inventory_violations": [],
+        "booking_violations": [],
+        "event_violations": [],
+        "foreign_key_violations": [],
+        "integrity": [
+          "ok"
+        ]
+      },
+      "unexpected_responses": []
+    }
+  ],
+  "requests_total": 2450,
+  "final_audit": {
+    "ok": true,
+    "inventory_violations": [],
+    "booking_violations": [],
+    "event_violations": [],
+    "foreign_key_violations": [],
+    "integrity": [
+      "ok"
+    ]
+  },
+  "boundaries": [
+    "Synthetic data and local SQLite only; PostgreSQL not exercised.",
+    "Thread pool clients are overlapping in-flight requests, not requests arriving in one instant.",
+    "No production capacity/SLA, distributed failover, disk-full or network partition claim.",
+    "Admission gate limits application operations; http.server still creates a thread per connection.",
+    "Browse results are advisory; only booking transaction guarantees stock.",
+    "Cancellation cleanup is direct service invocation after HTTP phase, excluded from throughput."
+  ]
+}

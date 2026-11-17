@@ -1,0 +1,19 @@
+{
+  "browser_exercised": true,
+  "default_results": [
+    "8",
+    "16",
+    "3",
+    "3"
+  ],
+  "changed_parameters_results": [
+    "2",
+    "10",
+    "1",
+    "1"
+  ],
+  "code_panel_current_source": true,
+  "page_errors": [],
+  "screenshot": ".runtime/demo-ui-preview.png",
+  "url": "http://127.0.0.1:8092/"
+}

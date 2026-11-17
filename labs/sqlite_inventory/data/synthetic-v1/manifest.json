@@ -1,0 +1,43 @@
+{
+  "synthetic": true,
+  "seed": 20261104,
+  "start_date": "2027-01-01",
+  "days": 60,
+  "customers": 2000,
+  "booking_attempts": 1200,
+  "outcomes": {
+    "confirmed_created": 1192,
+    "cancelled": 205,
+    "sold_out": 8
+  },
+  "row_counts": {
+    "hotels": 3,
+    "room_types": 12,
+    "customers": 2000,
+    "nightly_inventory": 720,
+    "reservations": 1192,
+    "reservation_nights": 2212,
+    "inventory_events": 2593
+  },
+  "csv_sha256": {
+    "hotels.csv": "6cdefea7858facc1c131743596ebf141fa272ce6969ad5d35b22b718eb1f1ee4",
+    "room_types.csv": "b637ea520c5da08160fda19b21d6317e5a7b6c312d5d891f0c2c88a39eb7c3eb",
+    "customers.csv": "0d78a2ba31227217b32bd53a476178e2c609cda8b7b4c8f9ca8c7d54b268ea4c",
+    "nightly_inventory.csv": "794c6732b74c097fd5fd8976e0a18c14df155e3479fc05d0f4e8c8857c1f4a80",
+    "reservations.csv": "db97b1cf102d203203176eaf7d33af65532ee6d16c032a670d1774c36121d8a6",
+    "reservation_nights.csv": "e4d8de59a97606f359a6630f3f86ca3bb66bc77a20c7ff2131d0a01eb9438edb",
+    "inventory_events.csv": "aef9baac9ea62f3c32fac91422c212805962ed84e13ed6ffd28241e6c9e1de34"
+  },
+  "audit": {
+    "ok": true,
+    "inventory_violations": [],
+    "booking_violations": [],
+    "event_violations": [],
+    "foreign_key_violations": [],
+    "integrity": [
+      "ok"
+    ]
+  },
+  "engine": "SQLite",
+  "reproducibility": "CSV bytes deterministic with same Python and parameters"
+}

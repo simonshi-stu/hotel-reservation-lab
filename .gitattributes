@@ -1,0 +1,2 @@
+# Preserve imported source and synthetic data bytes, including provenance hashes.
+labs/sqlite_inventory/** -text

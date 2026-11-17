@@ -1,0 +1,6 @@
+{
+  "hotel/api.py": "2de7de009f7b56a948dd881fb809b304b50b128a854fb363a8f742974789ff5c",
+  "scripts/http_client.py": "71431fb8c482df3b9ee12b84a39bec96c72e6533b1c47a58a1eb6e4bba522eed",
+  "scripts/load_matrix.py": "ef004420229e01f2951180b6321a39c3a54843f02e9c03ad84d33254cee3dd9b",
+  "tests/test_bounded_http.py": "5726ed61de838d3d2954158b8f5dc72a3f202efad93cadeaca213ec813505f4d"
+}
