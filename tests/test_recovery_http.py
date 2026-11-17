@@ -250,7 +250,12 @@ class RecoveryHTTPTests(unittest.TestCase):
     def test_symlink_archive_is_rejected(self):
         self.reset()
         alternate = self.path/('a'*32)
-        alternate.symlink_to(self.db().parent, target_is_directory=True)
+        try:
+            alternate.symlink_to(self.db().parent, target_is_directory=True)
+        except OSError as exc:
+            if getattr(exc, 'winerror', None) == 1314:
+                self.skipTest('Windows account lacks symlink privilege; security settings unchanged')
+            raise
         status, result = self.lookup(payload={**self.payload, 'generation': 'a'*32})
         self.assertEqual(status, 409, result)
         self.assertEqual(result['error']['code'], 'RECOVERY_UNAVAILABLE')

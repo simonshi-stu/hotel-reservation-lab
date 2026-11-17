@@ -1,0 +1,34 @@
+test_adjacent_full_stays_can_both_book (test_booking.BookingTests) ... ok
+test_audit_detects_deliberately_corrupt_ledger (test_booking.BookingTests) ... ok
+test_bottleneck_night_no_partial_write (test_booking.BookingTests) ... ok
+test_busy_writer_returns_retryable_error (test_booking.BookingTests) ... ok
+test_calendar_gap_entire_stay_rejected (test_booking.BookingTests) ... ok
+test_cancel_fault_rolls_back_all_nights (test_booking.BookingTests) ... ok
+test_cancel_owner_and_missing_order (test_booking.BookingTests) ... ok
+test_cancel_repeated_threads_and_replay_after_cancel (test_booking.BookingTests) ... ok
+test_database_constraints_prevent_negative_inventory (test_booking.BookingTests) ... ok
+test_fault_during_second_night_rolls_back_booking_and_events (test_booking.BookingTests) ... ok
+test_idempotency_customer_scope (test_booking.BookingTests) ... ok
+test_invalid_dates_and_quantities (test_booking.BookingTests) ... ok
+test_missing_customer_room_and_out_of_calendar (test_booking.BookingTests) ... ok
+test_multiple_processes_cannot_oversell (test_booking.BookingTests) ... ok
+test_multiple_processes_share_idempotency_and_cancel_once (test_booking.BookingTests) ... ok
+test_overlapping_mixed_batches_reclaim_inventory (test_booking.BookingTests) ... ok
+test_prices_and_checkout_exclusive (test_booking.BookingTests) ... ok
+test_process_crash_rolls_back_uncommitted_writes (test_booking.BookingTests) ... ok
+test_restart_reads_committed_order (test_booking.BookingTests) ... ok
+test_same_key_threads_one_order_and_conflict (test_booking.BookingTests) ... ok
+test_http_booking_lookup_cancel (test_booking.HttpTests) ... ok
+test_http_invalid_and_sold_out (test_booking.HttpTests) ... ok
+test_http_cancel_refill_entirely_via_http (test_booking.HttpTests) ... ok
+test_http_rejects_malformed_json (test_booking.HttpTests) ... ok
+test_body_deadline_returns_408_without_mutation (test_bounded_http.BoundedHttpTests) ... ok
+test_partial_headers_have_total_deadline_and_fixed_worker_count (test_bounded_http.BoundedHttpTests) ... ok
+test_queue_full_expiry_no_commit_and_retry (test_bounded_http.BoundedHttpTests) ... ok
+test_shutdown_does_not_start_queued_business_and_joins_workers (test_bounded_http.BoundedHttpTests) ... ok
+test_unbounded_or_invalid_configuration_rejected (test_bounded_http.BoundedHttpTests) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 11.634s
+
+OK

@@ -1,0 +1,29 @@
+{
+  "synthetic": true,
+  "seed": 61104,
+  "request_count": 190,
+  "input_sha256": "2d90b4c18b689d6b346543f0bac12a1a524ee8479b6e17f2282e6f77eb496e13",
+  "data_directory": "E:\\Projects\\hotel-reservation-lab\\.runtime\\room-planning-20261104T085357431248Z",
+  "metrics": {
+    "no_upgrade": {
+      "accepted": 68,
+      "people": 137,
+      "room_nights": 162,
+      "revenue_cents": 8029200,
+      "upgraded_reservations": 0,
+      "existing_moves": 0,
+      "violations": [],
+      "rejection_rate": 0.6421052631578947
+    },
+    "upgrade": {
+      "accepted": 75,
+      "people": 155,
+      "room_nights": 178,
+      "revenue_cents": 7901000,
+      "upgraded_reservations": 15,
+      "existing_moves": 9,
+      "violations": [],
+      "rejection_rate": 0.6052631578947368
+    }
+  }
+}

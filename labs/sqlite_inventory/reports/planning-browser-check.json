@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "metrics": "不升级\t68\t137\t162\t80292.00元\t64.21%\t0\t0\t0\n允许同意升级\t75\t155\t178\t79010.00元\t60.53%\t15\t9\t0",
+  "daily_rows": 10,
+  "inventory_rows": 96,
+  "code_panel": true,
+  "page_errors": [],
+  "screenshot": ".runtime/planning-preview.png"
+}

@@ -1,0 +1,97 @@
+{
+  "synthetic": true,
+  "review_utc": "20261104T041111248192Z",
+  "source_report": "load-20261104T035926232657Z.json",
+  "source_report_modified": false,
+  "total_requests": 2450,
+  "http_status_counts": {
+    "409": 347,
+    "201": 81,
+    "503": 1216,
+    "200": 746,
+    "400": 60
+  },
+  "error_counts": {
+    "sold_out": 297,
+    "server_busy": 1216,
+    "idempotency_conflict": 50,
+    "invalid_quantity": 60
+  },
+  "overload": {
+    "all_server_busy": true,
+    "server_busy": 1216,
+    "database_busy": 0,
+    "fraction_all_requests": 0.4963265306122449
+  },
+  "new_booking_attempts": {
+    "requests": 1440,
+    "created": 81,
+    "sold_out": 297,
+    "rejected_before_business": 1062,
+    "overload_fraction": 0.7375
+  },
+  "historical_final_state": {
+    "reservations": 81,
+    "events": 324,
+    "available_sum": 271,
+    "statuses": {
+      "CANCELLED": 20,
+      "CONFIRMED": 61
+    }
+  },
+  "historical_audit": {
+    "ok": true,
+    "inventory_violations": [],
+    "booking_violations": [],
+    "event_violations": [],
+    "foreign_key_violations": [],
+    "integrity": [
+      "ok"
+    ]
+  },
+  "independent_probe": {
+    "before": {
+      "reservations": 1,
+      "events": 3,
+      "available_sum": 536,
+      "statuses": {
+        "CONFIRMED": 1
+      }
+    },
+    "after_rejected_requests": {
+      "reservations": 1,
+      "events": 3,
+      "available_sum": 536,
+      "statuses": {
+        "CONFIRMED": 1
+      }
+    },
+    "no_database_side_effects": true,
+    "retry_after_seconds": 1,
+    "same_rejected_booking_key_later_succeeded": true,
+    "rejected_cancel_later_succeeded": true,
+    "audit": {
+      "ok": true,
+      "inventory_violations": [],
+      "booking_violations": [],
+      "event_violations": [],
+      "foreign_key_violations": [],
+      "integrity": [
+        "ok"
+      ]
+    }
+  },
+  "connection_limit_probe": {
+    "application_slots": 1,
+    "simultaneous_partial_header_workers": 2,
+    "application_slot_still_available": true,
+    "finding": "Application admission is not a connection/thread limit; partial headers precede dispatch timeout."
+  },
+  "limits": [
+    "Historical report has aggregate responses, not per-request cancellation IDs.",
+    "41 successful cancellation responses do not establish how many distinct orders HTTP cancelled.",
+    "Original load script directly cancels all 20 targets before refill; no pure-HTTP lifecycle conclusion.",
+    "Allowed-status assertions permit 503; passed=true is a correctness assertion result, not an availability SLO.",
+    "No repeated steady-state benchmark, target arrival rate, retry-policy test, or capacity claim."
+  ]
+}

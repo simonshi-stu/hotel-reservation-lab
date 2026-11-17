@@ -1,0 +1,502 @@
+{
+  "synthetic": true,
+  "paired_cases": [
+    {
+      "seed": 61104,
+      "input_sha256": "2d90b4c18b689d6b346543f0bac12a1a524ee8479b6e17f2282e6f77eb496e13",
+      "requests": 190,
+      "metrics": {
+        "no_upgrade": {
+          "accepted": 68,
+          "people": 137,
+          "room_nights": 162,
+          "revenue_cents": 8029200,
+          "rejection_rate": 0.6421052631578947,
+          "violations": [],
+          "cohorts": {
+            "with_children": {
+              "requests": 61,
+              "accepted": 11,
+              "acceptance_rate": 0.18032786885245902
+            },
+            "without_children": {
+              "requests": 129,
+              "accepted": 57,
+              "acceptance_rate": 0.4418604651162791
+            },
+            "consented": {
+              "requests": 131,
+              "accepted": 52,
+              "acceptance_rate": 0.3969465648854962
+            },
+            "not_consented": {
+              "requests": 59,
+              "accepted": 16,
+              "acceptance_rate": 0.2711864406779661
+            }
+          },
+          "delta_vs_no_upgrade": {
+            "accepted": 0,
+            "people": 0,
+            "room_nights": 0,
+            "revenue_cents": 0
+          }
+        },
+        "upgrade": {
+          "accepted": 75,
+          "people": 155,
+          "room_nights": 178,
+          "revenue_cents": 7901000,
+          "rejection_rate": 0.6052631578947368,
+          "violations": [],
+          "cohorts": {
+            "with_children": {
+              "requests": 61,
+              "accepted": 14,
+              "acceptance_rate": 0.22950819672131148
+            },
+            "without_children": {
+              "requests": 129,
+              "accepted": 61,
+              "acceptance_rate": 0.4728682170542636
+            },
+            "consented": {
+              "requests": 131,
+              "accepted": 59,
+              "acceptance_rate": 0.45038167938931295
+            },
+            "not_consented": {
+              "requests": 59,
+              "accepted": 16,
+              "acceptance_rate": 0.2711864406779661
+            }
+          },
+          "delta_vs_no_upgrade": {
+            "accepted": 7,
+            "people": 18,
+            "room_nights": 16,
+            "revenue_cents": -128200
+          }
+        },
+        "guarded_upgrade": {
+          "accepted": 69,
+          "people": 137,
+          "room_nights": 163,
+          "revenue_cents": 8033200,
+          "rejection_rate": 0.6368421052631579,
+          "violations": [],
+          "cohorts": {
+            "with_children": {
+              "requests": 61,
+              "accepted": 11,
+              "acceptance_rate": 0.18032786885245902
+            },
+            "without_children": {
+              "requests": 129,
+              "accepted": 58,
+              "acceptance_rate": 0.4496124031007752
+            },
+            "consented": {
+              "requests": 131,
+              "accepted": 51,
+              "acceptance_rate": 0.3893129770992366
+            },
+            "not_consented": {
+              "requests": 59,
+              "accepted": 18,
+              "acceptance_rate": 0.3050847457627119
+            }
+          },
+          "delta_vs_no_upgrade": {
+            "accepted": 1,
+            "people": 0,
+            "room_nights": 1,
+            "revenue_cents": 4000
+          }
+        }
+      }
+    },
+    {
+      "seed": 71,
+      "input_sha256": "3d600c0d9a5e4ccf4173a1867eda7b3c920728961aca3b66647805cff05bec55",
+      "requests": 180,
+      "metrics": {
+        "no_upgrade": {
+          "accepted": 55,
+          "people": 110,
+          "room_nights": 148,
+          "revenue_cents": 7018600,
+          "rejection_rate": 0.6944444444444444,
+          "violations": [],
+          "cohorts": {
+            "with_children": {
+              "requests": 76,
+              "accepted": 15,
+              "acceptance_rate": 0.19736842105263158
+            },
+            "without_children": {
+              "requests": 104,
+              "accepted": 40,
+              "acceptance_rate": 0.38461538461538464
+            },
+            "consented": {
+              "requests": 130,
+              "accepted": 42,
+              "acceptance_rate": 0.3230769230769231
+            },
+            "not_consented": {
+              "requests": 50,
+              "accepted": 13,
+              "acceptance_rate": 0.26
+            }
+          },
+          "delta_vs_no_upgrade": {
+            "accepted": 0,
+            "people": 0,
+            "room_nights": 0,
+            "revenue_cents": 0
+          }
+        },
+        "upgrade": {
+          "accepted": 64,
+          "people": 129,
+          "room_nights": 164,
+          "revenue_cents": 6923200,
+          "rejection_rate": 0.6444444444444445,
+          "violations": [],
+          "cohorts": {
+            "with_children": {
+              "requests": 76,
+              "accepted": 15,
+              "acceptance_rate": 0.19736842105263158
+            },
+            "without_children": {
+              "requests": 104,
+              "accepted": 49,
+              "acceptance_rate": 0.47115384615384615
+            },
+            "consented": {
+              "requests": 130,
+              "accepted": 53,
+              "acceptance_rate": 0.4076923076923077
+            },
+            "not_consented": {
+              "requests": 50,
+              "accepted": 11,
+              "acceptance_rate": 0.22
+            }
+          },
+          "delta_vs_no_upgrade": {
+            "accepted": 9,
+            "people": 19,
+            "room_nights": 16,
+            "revenue_cents": -95400
+          }
+        },
+        "guarded_upgrade": {
+          "accepted": 55,
+          "people": 109,
+          "room_nights": 149,
+          "revenue_cents": 6995000,
+          "rejection_rate": 0.6944444444444444,
+          "violations": [],
+          "cohorts": {
+            "with_children": {
+              "requests": 76,
+              "accepted": 14,
+              "acceptance_rate": 0.18421052631578946
+            },
+            "without_children": {
+              "requests": 104,
+              "accepted": 41,
+              "acceptance_rate": 0.3942307692307692
+            },
+            "consented": {
+              "requests": 130,
+              "accepted": 42,
+              "acceptance_rate": 0.3230769230769231
+            },
+            "not_consented": {
+              "requests": 50,
+              "accepted": 13,
+              "acceptance_rate": 0.26
+            }
+          },
+          "delta_vs_no_upgrade": {
+            "accepted": 0,
+            "people": -1,
+            "room_nights": 1,
+            "revenue_cents": -23600
+          }
+        }
+      }
+    },
+    {
+      "seed": 202,
+      "input_sha256": "248c5dee20a9413d565370687dc4e79248052048ca6ecd7ccb91b43a1dc5f6db",
+      "requests": 165,
+      "metrics": {
+        "no_upgrade": {
+          "accepted": 56,
+          "people": 105,
+          "room_nights": 134,
+          "revenue_cents": 6288800,
+          "rejection_rate": 0.6606060606060606,
+          "violations": [],
+          "cohorts": {
+            "with_children": {
+              "requests": 60,
+              "accepted": 10,
+              "acceptance_rate": 0.16666666666666666
+            },
+            "without_children": {
+              "requests": 105,
+              "accepted": 46,
+              "acceptance_rate": 0.4380952380952381
+            },
+            "consented": {
+              "requests": 112,
+              "accepted": 36,
+              "acceptance_rate": 0.32142857142857145
+            },
+            "not_consented": {
+              "requests": 53,
+              "accepted": 20,
+              "acceptance_rate": 0.37735849056603776
+            }
+          },
+          "delta_vs_no_upgrade": {
+            "accepted": 0,
+            "people": 0,
+            "room_nights": 0,
+            "revenue_cents": 0
+          }
+        },
+        "upgrade": {
+          "accepted": 69,
+          "people": 143,
+          "room_nights": 157,
+          "revenue_cents": 6816800,
+          "rejection_rate": 0.5818181818181818,
+          "violations": [],
+          "cohorts": {
+            "with_children": {
+              "requests": 60,
+              "accepted": 18,
+              "acceptance_rate": 0.3
+            },
+            "without_children": {
+              "requests": 105,
+              "accepted": 51,
+              "acceptance_rate": 0.4857142857142857
+            },
+            "consented": {
+              "requests": 112,
+              "accepted": 49,
+              "acceptance_rate": 0.4375
+            },
+            "not_consented": {
+              "requests": 53,
+              "accepted": 20,
+              "acceptance_rate": 0.37735849056603776
+            }
+          },
+          "delta_vs_no_upgrade": {
+            "accepted": 13,
+            "people": 38,
+            "room_nights": 23,
+            "revenue_cents": 528000
+          }
+        },
+        "guarded_upgrade": {
+          "accepted": 58,
+          "people": 113,
+          "room_nights": 142,
+          "revenue_cents": 6492000,
+          "rejection_rate": 0.6484848484848484,
+          "violations": [],
+          "cohorts": {
+            "with_children": {
+              "requests": 60,
+              "accepted": 11,
+              "acceptance_rate": 0.18333333333333332
+            },
+            "without_children": {
+              "requests": 105,
+              "accepted": 47,
+              "acceptance_rate": 0.44761904761904764
+            },
+            "consented": {
+              "requests": 112,
+              "accepted": 38,
+              "acceptance_rate": 0.3392857142857143
+            },
+            "not_consented": {
+              "requests": 53,
+              "accepted": 20,
+              "acceptance_rate": 0.37735849056603776
+            }
+          },
+          "delta_vs_no_upgrade": {
+            "accepted": 2,
+            "people": 8,
+            "room_nights": 8,
+            "revenue_cents": 203200
+          }
+        }
+      }
+    },
+    {
+      "seed": 999,
+      "input_sha256": "d9a16c0a904daa361b71eee0edf3b9d5a92bb0571757c6210d05ca9b5a0b48d8",
+      "requests": 177,
+      "metrics": {
+        "no_upgrade": {
+          "accepted": 64,
+          "people": 128,
+          "room_nights": 142,
+          "revenue_cents": 6574200,
+          "rejection_rate": 0.6384180790960452,
+          "violations": [],
+          "cohorts": {
+            "with_children": {
+              "requests": 61,
+              "accepted": 14,
+              "acceptance_rate": 0.22950819672131148
+            },
+            "without_children": {
+              "requests": 116,
+              "accepted": 50,
+              "acceptance_rate": 0.43103448275862066
+            },
+            "consented": {
+              "requests": 127,
+              "accepted": 39,
+              "acceptance_rate": 0.30708661417322836
+            },
+            "not_consented": {
+              "requests": 50,
+              "accepted": 25,
+              "acceptance_rate": 0.5
+            }
+          },
+          "delta_vs_no_upgrade": {
+            "accepted": 0,
+            "people": 0,
+            "room_nights": 0,
+            "revenue_cents": 0
+          }
+        },
+        "upgrade": {
+          "accepted": 74,
+          "people": 152,
+          "room_nights": 174,
+          "revenue_cents": 7477000,
+          "rejection_rate": 0.5819209039548022,
+          "violations": [],
+          "cohorts": {
+            "with_children": {
+              "requests": 61,
+              "accepted": 15,
+              "acceptance_rate": 0.2459016393442623
+            },
+            "without_children": {
+              "requests": 116,
+              "accepted": 59,
+              "acceptance_rate": 0.5086206896551724
+            },
+            "consented": {
+              "requests": 127,
+              "accepted": 48,
+              "acceptance_rate": 0.3779527559055118
+            },
+            "not_consented": {
+              "requests": 50,
+              "accepted": 26,
+              "acceptance_rate": 0.52
+            }
+          },
+          "delta_vs_no_upgrade": {
+            "accepted": 10,
+            "people": 24,
+            "room_nights": 32,
+            "revenue_cents": 902800
+          }
+        },
+        "guarded_upgrade": {
+          "accepted": 65,
+          "people": 132,
+          "room_nights": 147,
+          "revenue_cents": 6733200,
+          "rejection_rate": 0.632768361581921,
+          "violations": [],
+          "cohorts": {
+            "with_children": {
+              "requests": 61,
+              "accepted": 14,
+              "acceptance_rate": 0.22950819672131148
+            },
+            "without_children": {
+              "requests": 116,
+              "accepted": 51,
+              "acceptance_rate": 0.4396551724137931
+            },
+            "consented": {
+              "requests": 127,
+              "accepted": 42,
+              "acceptance_rate": 0.33070866141732286
+            },
+            "not_consented": {
+              "requests": 50,
+              "accepted": 23,
+              "acceptance_rate": 0.46
+            }
+          },
+          "delta_vs_no_upgrade": {
+            "accepted": 1,
+            "people": 4,
+            "room_nights": 5,
+            "revenue_cents": 159000
+          }
+        }
+      }
+    }
+  ],
+  "pooled_totals": {
+    "no_upgrade": {
+      "accepted": 243,
+      "people": 480,
+      "room_nights": 586,
+      "revenue_cents": 27910800,
+      "requests": 712,
+      "rejection_rate": 0.6587078651685394,
+      "violations": 0
+    },
+    "upgrade": {
+      "accepted": 282,
+      "people": 579,
+      "room_nights": 673,
+      "revenue_cents": 29118000,
+      "requests": 712,
+      "rejection_rate": 0.6039325842696629,
+      "violations": 0
+    },
+    "guarded_upgrade": {
+      "accepted": 247,
+      "people": 491,
+      "room_nights": 601,
+      "revenue_cents": 28253400,
+      "requests": 712,
+      "rejection_rate": 0.6530898876404494,
+      "violations": 0
+    }
+  },
+  "data_directory": "E:\\Projects\\hotel-reservation-lab\\.artifacts\\integration-20261117\\labs\\sqlite_inventory\\.runtime\\policy-frontier-20261117T040335001473Z",
+  "comparison": "Same calendar, demand, order and price within each seed; no future demand available to any policy.",
+  "limitations": [
+    "Four constructed seeds, not a population estimate or significance test.",
+    "Cohort acceptance differences reflect observed outcomes, not causal discrimination estimates.",
+    "Reserve of one premium room per type/night is heuristic, not a revenue guarantee.",
+    "New v2 experiment schema includes initial_assigned; old experiment databases are not migrated."
+  ]
+}

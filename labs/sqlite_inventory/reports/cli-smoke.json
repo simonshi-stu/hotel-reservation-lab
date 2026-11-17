@@ -1,0 +1,10 @@
+{
+  "docs_links_ok": true,
+  "cli_smoke_ok": true,
+  "health": {
+    "status": "ok",
+    "database": "sqlite",
+    "synthetic": true
+  },
+  "manual_example_available": 16
+}

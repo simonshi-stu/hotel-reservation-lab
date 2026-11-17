@@ -63,3 +63,10 @@ python -m hotel_sim --input data/week.json --output results/week.json
 - SQLite 并发与故障测试不能证明 PostgreSQL、真实酒店流量或生产性能。
 - 默认只监听本机。没有登录、权限管理、TLS、支付或渠道库存同步；Python 标准库 HTTP 服务不适合公网生产部署。不要开放到公共网络，也不要输入真实客人数据。
 - 旧轮次查询只读取原记录，不自动补单或修库。未找到记录不能证明请求从未执行；缺失或损坏数据库仍须保留未确认状态。
+
+
+## 本机策略实验室整合
+
+新增 [双模型整合说明](docs/INTEGRATION.md) 与 `labs/sqlite_inventory/`：保留具体房间、加床及 SQLite 恢复主应用，同时收录房型库存、有界换房及 712 笔合成策略实验。两套模型的输入、价格、资源约束不同，不混用验证结论。
+
+统一验证：`python -B scripts/verify_integrated.py --experiments`。
