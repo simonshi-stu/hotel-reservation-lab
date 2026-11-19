@@ -17,6 +17,7 @@ import threading
 from urllib.parse import parse_qs, urlsplit
 from uuid import uuid4
 
+from hotel_demo.availability import query_parameters, view as availability_view
 from hotel_demo.recovery import lookup_operation, RecoveryUnavailable
 from hotel_sim.scenario import load_scenario, parse_requests
 from hotel_sim.sqlite_audit import audit
@@ -200,13 +201,15 @@ class DemoHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         try:
             self._validate_host();url=urlsplit(self.path)
+            if url.path=='/api/availability':
+                return self._json(200,availability_view(self.server.workspace,query_parameters(url.query)))
             if url.path=='/api/state':
                 mode=parse_qs(url.query).get('mode',['strict'])[0]
                 return self._json(200,self.server.workspace.state(mode))
             if url.path=='/api/reconcile':
                 mode=parse_qs(url.query).get('mode',['strict'])[0]
                 return self._json(200,self.server.workspace.reconcile(mode))
-            names={'/':('index.html','text/html; charset=utf-8'),'/app.js':('app.js','text/javascript; charset=utf-8'),'/styles.css':('styles.css','text/css; charset=utf-8')}
+            names={'/availability':('availability.html','text/html; charset=utf-8'),'/availability.js':('availability.js','text/javascript; charset=utf-8'),'/':('index.html','text/html; charset=utf-8'),'/app.js':('app.js','text/javascript; charset=utf-8'),'/styles.css':('styles.css','text/css; charset=utf-8')}
             if url.path=='/favicon.ico':self._headers(204,'image/x-icon',0);return
             if url.path not in names:raise DemoError(404,'NOT_FOUND','未找到页面。')
             name,kind=names[url.path];data=(Path(__file__).with_name('static')/name).read_text(encoding='utf-8')

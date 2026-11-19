@@ -1,0 +1,54 @@
+{
+  "synthetic_only": true,
+  "sample": "fresh week.json database, proposed two adults, standard/king, 2026-12-07 to 2026-12-09",
+  "window_days": 14,
+  "known_days": 10,
+  "unavailable_days": 4,
+  "first_day": {
+    "date": "2026-12-07",
+    "available": true,
+    "types": [
+      {
+        "room_type": "standard",
+        "remaining": 4,
+        "configured_protection": 0,
+        "active_protection": 0
+      },
+      {
+        "room_type": "deluxe",
+        "remaining": 1,
+        "configured_protection": 0,
+        "active_protection": 0
+      },
+      {
+        "room_type": "family",
+        "remaining": 2,
+        "configured_protection": 0,
+        "active_protection": 0
+      },
+      {
+        "room_type": "suite",
+        "remaining": 1,
+        "configured_protection": 0,
+        "active_protection": 0
+      }
+    ],
+    "extra_beds_remaining": 3,
+    "cots_remaining": 2
+  },
+  "preview": {
+    "accepted": true,
+    "nights": [
+      "2026-12-07",
+      "2026-12-08"
+    ],
+    "room_id": "S101",
+    "assigned_type": "standard",
+    "bed_type": "king",
+    "upgraded": false,
+    "extra_beds": 0,
+    "cots": 0,
+    "upgrade_cost_cents": 0,
+    "rejection_reasons": []
+  }
+}
