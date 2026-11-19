@@ -63,3 +63,9 @@ python -m hotel_sim --input data/week.json --output results/week.json
 - SQLite 并发与故障测试不能证明 PostgreSQL、真实酒店流量或生产性能。
 - 默认只监听本机。没有登录、权限管理、TLS、支付或渠道库存同步；Python 标准库 HTTP 服务不适合公网生产部署。不要开放到公共网络，也不要输入真实客人数据。
 - 旧轮次查询只读取原记录，不自动补单或修库。未找到记录不能证明请求从未执行；缺失或损坏数据库仍须保留未确认状态。
+
+## 逐日保护库存与确定性回放
+
+新增 `python -B -m hotel_sim.replay --input data/week.json --output results/week-replay.json`。
+支持按高档房型和日期设置保护数量，记录有效输入哈希、逐单决定及每日资源变化，不读写已有预订数据库。
+详见 [回放使用说明与已运行证据](docs/POLICY-REPLAY.md)。
