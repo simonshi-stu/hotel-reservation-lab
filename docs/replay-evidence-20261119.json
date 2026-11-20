@@ -1,0 +1,286 @@
+{
+  "evidence_status": "executed_cloud_simulation",
+  "synthetic_only": true,
+  "runs": {
+    "counter-unprotected": {
+      "input_request_count": 3,
+      "input_sha256": "5b17c90f6e839c5b6459838ce1e210bbdffff5806ca534e7c6471fb850530707",
+      "source_sha256": "944914b580514e6bd9d4a960989f7abb25fb2bf2aac313176c510293b181435c",
+      "processing_order": [
+        "A",
+        "B",
+        "C"
+      ],
+      "protection": [],
+      "summaries": {
+        "protected_upgrade": {
+          "accepted": 1,
+          "accepted_room_nights": 2,
+          "accepted_with_children": 0,
+          "available_room_nights": 2,
+          "modeled_upgrade_cost_cents": 12000,
+          "occupancy_fraction": 1.0,
+          "rejected": 2,
+          "rejection_reason_counts_nonexclusive": {
+            "NO_SAME_ROOM_FOR_ENTIRE_STAY": 2
+          },
+          "upgraded": 1
+        },
+        "strict": {
+          "accepted": 2,
+          "accepted_room_nights": 2,
+          "accepted_with_children": 0,
+          "available_room_nights": 2,
+          "modeled_upgrade_cost_cents": 0,
+          "occupancy_fraction": 1.0,
+          "rejected": 1,
+          "rejection_reason_counts_nonexclusive": {
+            "NO_ELIGIBLE_ROOM_TYPE": 1
+          },
+          "upgraded": 0
+        },
+        "upgrade": {
+          "accepted": 1,
+          "accepted_room_nights": 2,
+          "accepted_with_children": 0,
+          "available_room_nights": 2,
+          "modeled_upgrade_cost_cents": 12000,
+          "occupancy_fraction": 1.0,
+          "rejected": 2,
+          "rejection_reason_counts_nonexclusive": {
+            "NO_SAME_ROOM_FOR_ENTIRE_STAY": 2
+          },
+          "upgraded": 1
+        }
+      }
+    },
+    "counter-protected": {
+      "input_request_count": 3,
+      "input_sha256": "ec17ff27b3aff8076b09b06539f48ef01dc0b85c804547576680f43903d917ca",
+      "source_sha256": "944914b580514e6bd9d4a960989f7abb25fb2bf2aac313176c510293b181435c",
+      "processing_order": [
+        "A",
+        "B",
+        "C"
+      ],
+      "protection": [
+        {
+          "count": 1,
+          "date": "2026-12-07",
+          "room_type": "deluxe"
+        },
+        {
+          "count": 1,
+          "date": "2026-12-08",
+          "room_type": "deluxe"
+        }
+      ],
+      "summaries": {
+        "protected_upgrade": {
+          "accepted": 2,
+          "accepted_room_nights": 2,
+          "accepted_with_children": 0,
+          "available_room_nights": 2,
+          "modeled_upgrade_cost_cents": 0,
+          "occupancy_fraction": 1.0,
+          "rejected": 1,
+          "rejection_reason_counts_nonexclusive": {
+            "PROTECTED_INVENTORY": 1
+          },
+          "upgraded": 0
+        },
+        "strict": {
+          "accepted": 2,
+          "accepted_room_nights": 2,
+          "accepted_with_children": 0,
+          "available_room_nights": 2,
+          "modeled_upgrade_cost_cents": 0,
+          "occupancy_fraction": 1.0,
+          "rejected": 1,
+          "rejection_reason_counts_nonexclusive": {
+            "NO_ELIGIBLE_ROOM_TYPE": 1
+          },
+          "upgraded": 0
+        },
+        "upgrade": {
+          "accepted": 1,
+          "accepted_room_nights": 2,
+          "accepted_with_children": 0,
+          "available_room_nights": 2,
+          "modeled_upgrade_cost_cents": 12000,
+          "occupancy_fraction": 1.0,
+          "rejected": 2,
+          "rejection_reason_counts_nonexclusive": {
+            "NO_SAME_ROOM_FOR_ENTIRE_STAY": 2
+          },
+          "upgraded": 1
+        }
+      }
+    },
+    "week-replay": {
+      "input_request_count": 75,
+      "input_sha256": "eacc2e3b0bc9ff2c402706f09da7bf38be69754cdace17dd8328c3e2c9502753",
+      "source_sha256": "e441e0f361bf4651b571af8afeb3d6b940cd76f193bb36ce21862ef93371ac20",
+      "processing_order": [
+        "SYN-001",
+        "SYN-002",
+        "SYN-003",
+        "SYN-004",
+        "SYN-005",
+        "SYN-006",
+        "SYN-007",
+        "SYN-008",
+        "SYN-009",
+        "SYN-010",
+        "SYN-011",
+        "SYN-012",
+        "SYN-013",
+        "SYN-014",
+        "SYN-015",
+        "SYN-016",
+        "SYN-017",
+        "SYN-018",
+        "SYN-019",
+        "SYN-020",
+        "SYN-021",
+        "SYN-022",
+        "SYN-023",
+        "SYN-024",
+        "SYN-025",
+        "SYN-026",
+        "SYN-027",
+        "SYN-028",
+        "SYN-029",
+        "SYN-030",
+        "SYN-031",
+        "SYN-032",
+        "SYN-033",
+        "SYN-034",
+        "SYN-035",
+        "SYN-036",
+        "SYN-037",
+        "SYN-038",
+        "SYN-039",
+        "SYN-040",
+        "SYN-041",
+        "SYN-042",
+        "SYN-043",
+        "SYN-044",
+        "SYN-045",
+        "SYN-046",
+        "SYN-047",
+        "SYN-048",
+        "SYN-049",
+        "SYN-050",
+        "SYN-051",
+        "SYN-052",
+        "SYN-053",
+        "SYN-054",
+        "SYN-055",
+        "SYN-056",
+        "SYN-057",
+        "SYN-058",
+        "SYN-059",
+        "SYN-060",
+        "SYN-061",
+        "SYN-062",
+        "SYN-063",
+        "SYN-064",
+        "SYN-065",
+        "SYN-066",
+        "SYN-067",
+        "SYN-068",
+        "SYN-069",
+        "SYN-070",
+        "SYN-071",
+        "SYN-072",
+        "SYN-073",
+        "SYN-074",
+        "SYN-075"
+      ],
+      "protection": [
+        {
+          "count": 1,
+          "date": "2026-12-10",
+          "room_type": "family"
+        },
+        {
+          "count": 1,
+          "date": "2026-12-10",
+          "room_type": "suite"
+        },
+        {
+          "count": 1,
+          "date": "2026-12-11",
+          "room_type": "family"
+        },
+        {
+          "count": 1,
+          "date": "2026-12-11",
+          "room_type": "suite"
+        },
+        {
+          "count": 1,
+          "date": "2026-12-12",
+          "room_type": "family"
+        },
+        {
+          "count": 1,
+          "date": "2026-12-12",
+          "room_type": "suite"
+        }
+      ],
+      "summaries": {
+        "protected_upgrade": {
+          "accepted": 27,
+          "accepted_room_nights": 44,
+          "accepted_with_children": 7,
+          "available_room_nights": 77,
+          "modeled_upgrade_cost_cents": 96000,
+          "occupancy_fraction": 0.571429,
+          "rejected": 48,
+          "rejection_reason_counts_nonexclusive": {
+            "BED_TYPE_INCOMPATIBLE": 31,
+            "NO_SAME_ROOM_FOR_ENTIRE_STAY": 38,
+            "PARTY_OR_CHILD_REQUIREMENTS_UNSUPPORTED": 13,
+            "PROTECTED_INVENTORY": 9,
+            "UPGRADE_COST_BUDGET_EXCEEDED": 9
+          },
+          "upgraded": 4
+        },
+        "strict": {
+          "accepted": 26,
+          "accepted_room_nights": 43,
+          "accepted_with_children": 7,
+          "available_room_nights": 77,
+          "modeled_upgrade_cost_cents": 0,
+          "occupancy_fraction": 0.558442,
+          "rejected": 49,
+          "rejection_reason_counts_nonexclusive": {
+            "BED_TYPE_INCOMPATIBLE": 24,
+            "NO_SAME_ROOM_FOR_ENTIRE_STAY": 36,
+            "PARTY_OR_CHILD_REQUIREMENTS_UNSUPPORTED": 13
+          },
+          "upgraded": 0
+        },
+        "upgrade": {
+          "accepted": 27,
+          "accepted_room_nights": 47,
+          "accepted_with_children": 5,
+          "available_room_nights": 77,
+          "modeled_upgrade_cost_cents": 186000,
+          "occupancy_fraction": 0.61039,
+          "rejected": 48,
+          "rejection_reason_counts_nonexclusive": {
+            "AUXILIARY_INVENTORY_EXHAUSTED": 3,
+            "BED_TYPE_INCOMPATIBLE": 30,
+            "NO_SAME_ROOM_FOR_ENTIRE_STAY": 39,
+            "PARTY_OR_CHILD_REQUIREMENTS_UNSUPPORTED": 12,
+            "UPGRADE_COST_BUDGET_EXCEEDED": 2
+          },
+          "upgraded": 6
+        }
+      }
+    }
+  }
+}
